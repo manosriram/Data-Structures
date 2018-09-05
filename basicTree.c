@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+static int level=0;
+
 struct node {
     int data;
     struct node *left;
@@ -9,6 +11,8 @@ struct node {
 
 
 struct node * insertNode(struct node *root,int d) {
+    struct node *temp;
+    temp = (struct node *)malloc(sizeof(struct node));
     if (root==NULL) {
         root = (struct node *)malloc(sizeof(struct node));
 
@@ -17,10 +21,10 @@ struct node * insertNode(struct node *root,int d) {
         return 0;
         }
         else {
-            root -> data = d;
-            root -> left = NULL;
-            root -> right = NULL;
-            return root;
+            temp -> data = d;
+            temp -> left = NULL;
+            temp -> right = NULL;
+            return temp;
         }
     }
     else {
@@ -43,6 +47,24 @@ void displayTree(struct node *root) {
     }
 }
 
+int searchTree(struct node *root,int d) {
+    
+    if (root -> data < d) {
+        root = root-> right;
+        level++;
+    }
+
+    if (root -> data > d) {
+        root = root -> left;
+        level++;
+    }
+
+    if (root->data == d) {
+    return 1;
+    }
+
+}
+
 
 int main() {
     int ch,d;
@@ -51,7 +73,7 @@ int main() {
 
     while(1) {
         printf("\n");
-        printf("1. Insert Tree Node. \n2. Display All Nodes. \n3.Exit.\n");
+        printf("1. Insert Tree Node. \n2. Display All Nodes. \n3.Search \n4.Exit.\n");
         scanf("%d",&ch);
 
         switch(ch) {
@@ -62,10 +84,21 @@ int main() {
 
             case 2:
             displayTree(root);
-            break;
+            break;  
 
             case 3:
+            scanf("%d",&d);
+            if (searchTree(root,d)) {
+            printf("Element Found!!");
+            printf("Found at level %d.",level);
+            }
+            break;
+
+            case 4:
             exit(0);
+
+            default:
+            printf("Check Your Input Data..Please Try Again!!\n");
         }
     }
 }
