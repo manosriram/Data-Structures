@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+<<<<<<< HEAD
 static int level;
 int cnt=0;
+=======
+static int level=0;
+>>>>>>> e4a0dcf8578d812fe2a81eb11bbec2c7565e5ce9
 
 struct node {
     int data;
@@ -14,6 +18,7 @@ struct node {
 struct node * insertNode(struct node *root,int d) {
     struct node *temp;
     temp = (struct node *)malloc(sizeof(struct node));
+<<<<<<< HEAD
     if (root) {
 
         if (d > root->data) 
@@ -24,6 +29,9 @@ struct node * insertNode(struct node *root,int d) {
 
     }
     if (!root) {
+=======
+    if (root==NULL) {
+>>>>>>> e4a0dcf8578d812fe2a81eb11bbec2c7565e5ce9
         root = (struct node *)malloc(sizeof(struct node));
 
         if (root == NULL) {
@@ -51,6 +59,24 @@ void displayTree(struct node *root) {
             printf("%d ",root->data);
         }
     }
+}
+
+int searchTree(struct node *root,int d) {
+    
+    if (root -> data < d) {
+        root = root-> right;
+        level++;
+    }
+
+    if (root -> data > d) {
+        root = root -> left;
+        level++;
+    }
+
+    if (root->data == d) {
+    return 1;
+    }
+
 }
 
 
@@ -92,7 +118,11 @@ int main() {
 
     while(1) {
         printf("\n");
+<<<<<<< HEAD
         printf("1. Insert Tree Node. \n2. Display All Nodes. \n3.Search \n4.Delete Data. \n5.Exit");
+=======
+        printf("1. Insert Tree Node. \n2. Display All Nodes. \n3.Search \n4.Exit.\n");
+>>>>>>> e4a0dcf8578d812fe2a81eb11bbec2c7565e5ce9
         scanf("%d",&ch);
 
         switch(ch) {
@@ -103,10 +133,11 @@ int main() {
 
             case 2:
             displayTree(root);
-            break;
+            break;  
 
             case 3:
             scanf("%d",&d);
+<<<<<<< HEAD
             int gt;
             gt = searchTree(root,d);
             if (gt) {
@@ -117,10 +148,16 @@ int main() {
             else {
             printf("Element Not Found!!");
             level=0;
+=======
+            if (searchTree(root,d)) {
+            printf("Element Found!!");
+            printf("Found at level %d.",level);
+>>>>>>> e4a0dcf8578d812fe2a81eb11bbec2c7565e5ce9
             }
             break;
 
             case 4:
+<<<<<<< HEAD
             // scanf("%d",&d);
             deleteTree(root);
             break;
@@ -130,6 +167,12 @@ int main() {
 
             default:
             printf("Wrong Choice Entered..");
+=======
+            exit(0);
+
+            default:
+            printf("Check Your Input Data..Please Try Again!!\n");
+>>>>>>> e4a0dcf8578d812fe2a81eb11bbec2c7565e5ce9
         }
     }
 }
