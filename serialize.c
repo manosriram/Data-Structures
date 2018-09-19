@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static int level = 0;
-
 struct node
 {
     int data;
@@ -10,7 +8,7 @@ struct node
     struct node *right;
 };
 
-struct node *insertNode(struct node *root, int d)
+struct node *addData(struct node *root, int d)
 {
     struct node *temp;
     temp = (struct node *)malloc(sizeof(struct node));
@@ -35,10 +33,10 @@ struct node *insertNode(struct node *root, int d)
     {
 
         if (d > root->data)
-            root->right = insertNode(root->right, d);
+            root->right = addData(root->right, d);
 
         if (d < root->data)
-            root->left = insertNode(root->left, d);
+            root->left = addData(root->left, d);
     }
     return root;
 }
@@ -48,69 +46,50 @@ void displayTree(struct node *root)
     if (root)
     {
         displayTree(root->left);
-        printf("%d - > ", root->data);
+        printf("%d -> ", root->data);
         displayTree(root->right);
     }
 }
 
-int searchTree(struct node *root, int d)
+struct node *serializeTree(struct node *root)
 {
 
-    if (root->data < d)
-    {
-        root = root->right;
-        level++;
-    }
+    if (root->left == NULL && root->right == NULL)
+        printf(" -1 ->");
 
-    if (root->data > d)
+    else
     {
-        root = root->left;
-        level++;
-    }
-
-    if (root->data == d)
-    {
-        return 1;
+        serializeTree(root->left);
+        printf(" %d ->", root->data);
+        serializeTree(root->right);
     }
 }
 
 int main()
 {
     int ch, d;
-
     struct node *root;
 
     while (1)
     {
-        printf("\n");
-        printf("1. Insert Tree Node. \n2. Display All Nodes. \n3.Search \n4.Exit.\n");
+        printf("Choose any One : \n1.Add Data. \n2.Display Tree. \n3.Serialize Tree. \n4.Search Data. \n5.Exit. \n");
         scanf("%d", &ch);
 
         switch (ch)
         {
         case 1:
             scanf("%d", &d);
-            root = insertNode(root, d);
+            root = addData(root, d);
             break;
 
         case 2:
             displayTree(root);
             break;
-
         case 3:
-            scanf("%d", &d);
-            if (searchTree(root, d))
-            {
-                printf("Element Found!!");
-                printf("Found at level %d.", level);
-            }
+            serializeTree(root);
             break;
-
-        case 4:
+        case 5:
             exit(0);
-
-        default:
-            printf("Check Your Input Data..Please Try Again!!\n");
         }
     }
 }
