@@ -54,7 +54,10 @@ void displayTree(struct node *root)
 struct node *serializeTree(struct node *root)
 {
 
-    if (root->left == NULL && root->right == NULL)
+    if (!root->left)
+        printf(" -1 ->");
+
+    if (!root->right)
         printf(" -1 ->");
 
     else
