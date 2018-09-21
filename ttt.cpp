@@ -214,9 +214,9 @@ bool checkStatus()
 // Resets All the Grids to its Original Position....Used to Restart the Game...
 void resetGrids()
 {
-    one = grid[0][0] = '1';
-    two = grid[0][1] = '2';
-    three = grid[0][2] = '3';
+    grid[0][0] = '1';
+    grid[0][1] = '2';
+    grid[0][2] = '3';
     grid[1][0] = '4';
     grid[1][1] = '5';
     grid[1][2] = '6';
@@ -234,16 +234,25 @@ void resetGrids()
     doneNine = false;
 }
 
+bool stat()
+{
+    if (grid[0][0] != '1' && grid[0][1] != '2' && grid[0][2] != '3' && grid[1][0] != '4' && grid[1][1] != '5' && grid[1][2] != '6' && grid[2][0] != '7' && grid[2][1] != '8' && grid[2][2] != '9')
+
+        return 1;
+
+    else
+        return 0;
+}
+
 int main()
 {
-restart:
     char ch;
     resetGrids();
     int pm, n;
     static int count, flag;
     count = 0;
     flag = 0;
-    while (count < 9)
+    while (1)
     {
 
         cout << '\n';
@@ -259,8 +268,13 @@ restart:
         cin >> pm;
         n = 1;
         takeMove(pm, n);
+        if (stat())
+        {
+            cout << "Match Tied!!";
+            break;
+        }
 
-        if (checkStatus() == 1)
+        if (checkStatus())
         {
             cout << '\n';
             cout << "Player ONE Wins!!" << '\n';
@@ -281,6 +295,11 @@ restart:
         cin >> pm;
         n = 2;
         takeMove(pm, n);
+        if (stat())
+        {
+            cout << "Match Tied!!" << '\n';
+            break;
+        }
 
         if (checkStatus())
         {
@@ -290,17 +309,13 @@ restart:
             cout << '\n';
             break;
         }
-        count++;
     }
-
-    if (!flag)
-        cout << "Match Tied..." << '\n';
 
     cout << "Restart Game ?? (Y/N)" << '\n';
     cin >> ch;
 
     if (ch == 'Y' || ch == 'y')
-        goto restart;
+        main();
 
     else
     {
