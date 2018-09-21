@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Initializations....
+// Initializations...
 static char grid[3][3];
 static char one = grid[0][0] = '1';
 static char two = grid[0][1] = '2';
@@ -12,7 +12,8 @@ static char six = grid[1][2] = '6';
 static char seven = grid[2][0] = '7';
 static char eight = grid[2][1] = '8';
 static char nine = grid[2][2] = '9';
-// static int count;
+bool doneOne = false, doneTwo = false, doneThree = false, doneFour = false, doneFive = false, doneSix = false, doneSeven = false, doneEight = false;
+bool doneNine = false;
 
 void takeMove(int pm, int n)
 {
@@ -21,75 +22,158 @@ void takeMove(int pm, int n)
     {
 
     case 1:
+        if (!doneOne)
+        {
+            if (n == 1)
+                grid[0][0] = 'X';
 
-        if (n == 1)
-            grid[0][0] = 'X';
-
-        if (n == 2)
-            grid[0][0] = 'O';
-
+            if (n == 2)
+                grid[0][0] = 'O';
+            doneOne = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
 
     case 2:
+        if (!doneTwo)
+        {
+            if (n == 1)
+                grid[0][1] = 'X';
 
-        if (n == 1)
-            grid[0][1] = 'X';
+            else if (n == 2)
+                grid[0][1] = 'O';
 
-        else if (n == 2)
-            grid[0][1] = 'O';
+            doneTwo = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
 
     case 3:
-        if (n == 1)
-            grid[0][2] = 'X';
+        if (!doneThree)
+        {
+            if (n == 1)
+                grid[0][2] = 'X';
 
-        else if (n == 2)
-            grid[0][2] = 'O';
+            else if (n == 2)
+                grid[0][2] = 'O';
+            doneThree = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
 
     case 4:
-        if (n == 1)
-            grid[1][0] = 'X';
+        if (!doneFour)
+        {
+            if (n == 1)
+                grid[1][0] = 'X';
 
-        else if (n == 2)
-            grid[1][0] = 'O';
+            else if (n == 2)
+                grid[1][0] = 'O';
+            doneFour = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
 
     case 5:
-        if (n == 1)
-            grid[1][1] = 'X';
+        if (!doneFive)
+        {
+            if (n == 1)
+                grid[1][1] = 'X';
 
-        else if (n == 2)
-            grid[1][1] = 'O';
+            else if (n == 2)
+                grid[1][1] = 'O';
+            doneFive = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
 
     case 6:
-        if (n == 1)
-            grid[1][2] = 'X';
-        else if (n == 2)
-            grid[1][2] = 'O';
+        if (!doneSix)
+        {
+            if (n == 1)
+                grid[1][2] = 'X';
+            else if (n == 2)
+                grid[1][2] = 'O';
+            doneSix = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
 
     case 7:
-        if (n == 1)
-            grid[2][0] = 'X';
-        else if (n == 2)
-            grid[2][0] = 'O';
+        if (!doneSeven)
+        {
+            if (n == 1)
+                grid[2][0] = 'X';
+            else if (n == 2)
+                grid[2][0] = 'O';
+            doneSeven = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
 
     case 8:
-        if (n == 1)
-            grid[2][1] = 'X';
-        else if (n == 2)
-            grid[2][1] = 'O';
+        if (!doneEight)
+        {
+            if (n == 1)
+                grid[2][1] = 'X';
+            else if (n == 2)
+                grid[2][1] = 'O';
+            doneEight = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
 
     case 9:
-        if (n == 1)
-            grid[2][2] = 'X';
-        else if (n == 2)
-            grid[2][2] = 'O';
+        if (!doneNine)
+        {
+            if (n == 1)
+                grid[2][2] = 'X';
+            else if (n == 2)
+                grid[2][2] = 'O';
+            doneNine = true;
+        }
+        else
+        {
+            cout << '\n';
+            cout << "Cell Already Selected...Please Choose Any Other Cell.." << '\n';
+        }
         break;
+
+    default:
+        cout << '\n';
+        cout << "Please Select Between 1 - 9 Cells..." << '\n';
     }
 }
 
@@ -124,12 +208,27 @@ bool checkStatus()
         return 0;
 }
 
+void resetGrids()
+{
+    grid[0][0] = '1';
+    grid[0][1] = '2';
+    grid[0][2] = '3';
+    grid[1][0] = '4';
+    grid[1][1] = '5';
+    grid[1][2] = '6';
+    grid[2][0] = '7';
+    grid[2][1] = '8';
+    grid[2][2] = '9';
+}
+
 int main()
 {
-
+restart:
+    char ch;
+    resetGrids();
     int pm, n;
-
-    while (1)
+    static int count, flag;
+    while (count < 9)
     {
         cout << '\n';
         cout << '|' << " " << grid[0][0] << " " << '|' << " " << grid[0][1] << " " << '|' << " " << grid[0][2] << " " << '|' << " " << '\n';
@@ -146,8 +245,11 @@ int main()
 
         if (checkStatus() == 1)
         {
+            cout << '\n';
             cout << "Player ONE Wins!!" << '\n';
-            exit(0);
+            cout << '\n';
+            flag = 1;
+            break;
         }
 
         cout << '\n';
@@ -165,8 +267,27 @@ int main()
 
         if (checkStatus())
         {
+            cout << '\n';
             cout << "Player TWO Wins!!" << '\n';
-            exit(0);
+            flag = 1;
+            cout << '\n';
+            break;
         }
+        count++;
+    }
+
+    if (flag)
+        cout << "Mathc Tied..." << '\n';
+
+    cout << "Restart Game ?? (Y/N)" << '\n';
+    cin >> ch;
+
+    if (ch == 'Y' || ch == 'y')
+        goto restart;
+
+    else
+    {
+        cout << "Thank You..." << '\n';
+        exit(0);
     }
 }
