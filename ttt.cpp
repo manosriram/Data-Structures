@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Initializations...
+// Global Initializations...
 static char grid[3][3];
 static char one = grid[0][0] = '1';
 static char two = grid[0][1] = '2';
@@ -15,6 +15,7 @@ static char nine = grid[2][2] = '9';
 bool doneOne = false, doneTwo = false, doneThree = false, doneFour = false, doneFive = false, doneSix = false, doneSeven = false, doneEight = false;
 bool doneNine = false;
 
+// Enters Data into The Particular Cell..
 void takeMove(int pm, int n)
 {
 
@@ -177,6 +178,8 @@ void takeMove(int pm, int n)
     }
 }
 
+// Checks if any of the Columns or Rows are Equal...
+
 bool checkStatus()
 {
 
@@ -208,17 +211,27 @@ bool checkStatus()
         return 0;
 }
 
+// Resets All the Grids to its Original Position....Used to Restart the Game...
 void resetGrids()
 {
-    grid[0][0] = '1';
-    grid[0][1] = '2';
-    grid[0][2] = '3';
+    one = grid[0][0] = '1';
+    two = grid[0][1] = '2';
+    three = grid[0][2] = '3';
     grid[1][0] = '4';
     grid[1][1] = '5';
     grid[1][2] = '6';
     grid[2][0] = '7';
     grid[2][1] = '8';
     grid[2][2] = '9';
+    doneOne = false;
+    doneTwo = false;
+    doneThree = false;
+    doneFour = false;
+    doneFive = false;
+    doneSix = false;
+    doneSeven = false;
+    doneEight = false;
+    doneNine = false;
 }
 
 int main()
@@ -228,9 +241,13 @@ restart:
     resetGrids();
     int pm, n;
     static int count, flag;
+    count = 0;
+    flag = 0;
     while (count < 9)
     {
+
         cout << '\n';
+        cout << "WARNING : Wrong Selection Also Costs You a CHANCE..." << '\n';
         cout << '|' << " " << grid[0][0] << " " << '|' << " " << grid[0][1] << " " << '|' << " " << grid[0][2] << " " << '|' << " " << '\n';
         cout << "--------------" << '\n';
         cout << '|' << " " << grid[1][0] << " " << '|' << " " << grid[1][1] << " " << '|' << " " << grid[1][2] << " " << '|' << " " << '\n';
@@ -276,8 +293,8 @@ restart:
         count++;
     }
 
-    if (flag)
-        cout << "Mathc Tied..." << '\n';
+    if (!flag)
+        cout << "Match Tied..." << '\n';
 
     cout << "Restart Game ?? (Y/N)" << '\n';
     cin >> ch;
