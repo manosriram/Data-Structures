@@ -130,6 +130,9 @@ class HashMap
     }
 };
 /*
+
+While Not Using this file as an Header file...
+
 int main()
 {
     int key, value;
