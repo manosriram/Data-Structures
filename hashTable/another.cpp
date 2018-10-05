@@ -4,6 +4,8 @@
 #include <cstdio>
 using namespace std;
 
+static int keyCount;
+
 const int TABLE_SIZE = 128;
 
 class HashEntry
@@ -60,20 +62,6 @@ class HashMap
     //     }
     // }
 
-    void disc()
-    {
-        int hash = HashFunc(key);
-
-        for (int t = 0; t < TABLE_SIZE; t++)
-        {
-            if (table[t] != NULL)
-            {
-                if (table[t]->value != 0)
-                    cout << table[t]->key << " ";
-            }
-        }
-    }
-
     void check(int key, int value)
     {
         int hash = HashFunc(key);
@@ -96,15 +84,10 @@ class HashMap
         }
     }
 
-    int counted[128];
-
     void Insert(int key, int value)
     {
         int hash = HashFunc(key);
-
-        for (int t = 0; t < 128; t++)
-            counted[t] = 0;
-
+        int count[256];
         while (table[hash] != NULL && table[hash]->key != key)
         {
             hash = HashFunc(hash + 1);
@@ -114,12 +97,11 @@ class HashMap
 
         if (table[hash] != NULL)
         {
-            table[hash]->value++;
+            count[hash]++;
         }
+        // delete table[hash];
 
         table[hash] = new HashEntry(key, value);
-
-        // delete table[hash];
     }
 
     void Search(int key)
@@ -177,6 +159,13 @@ class HashMap
             if (table[i] != NULL)
                 cout << "Key :  " << table[i]->key << "  "
                      << "Value :   " << table[i]->value << '\n';
+        }
+    }
+
+    void countNo()
+    {
+        for (int t = 0; t < TABLE_SIZE; t++)
+        {
         }
     }
 };
