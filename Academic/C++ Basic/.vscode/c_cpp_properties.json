@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "browser": {
+                "path": [
+                    "${workspaceRoot}",
+                    "E:\\New folder\\MingW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++"
+
+            
+            ]
+            }
+        }
+    ],
+    "version": 4
+}
