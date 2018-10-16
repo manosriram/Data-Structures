@@ -50,19 +50,3 @@ int sumOfNodes(node *root)
     sum2 = sumOfNodes(root->right) + root->data;
     return max(sum1, sum2);
 }
-
-int main()
-{
-    int n;
-    node *root = new node();
-    while (1)
-    {
-
-        cin >> n;
-        insert(root, n);
-        cout << "Sum : " << sumOfNodes(root) << '\n';
-    }
-    // inOrder(root);
-
-    // cout << t;
-}
