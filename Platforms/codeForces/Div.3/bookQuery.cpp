@@ -12,34 +12,40 @@ void pushFront(int arr[], int n, int count)
     return;
 }
 
+void searchBack(int arr[], int key, int T, int count, int mid)
+{
+    int counter = 0;
+    for (int t1 = T - 1; t1 > mid; t1--)
+    {
+        if (arr[t1] == key)
+        {
+            cout << counter << endl;
+            return;
+        }
+        counter++;
+    }
+}
+
 void searchSeq(int arr[], int key, int T, int count)
 {
     int cnt = 0;
-    int low = 0;
-    int high = T - 1;
-    int mid = (low + high) / 2;
+    int mid = (T - 1) / 2;
     for (int t = 0; t < count + T; t++)
     {
-        if (t == mid)
-            cnt = T - t - 2;
 
         if (t <= mid)
         {
             if (arr[t] == key)
             {
                 cout << cnt << endl;
-                return;
+                break;
             }
             cnt++;
         }
         if (t > mid)
         {
-
-            if (arr[t] == key)
-            {
-                cout << cnt << endl;
-            }
-            cnt--;
+            searchBack(arr, key, T, count, mid);
+            return;
         }
     }
 }
@@ -50,7 +56,7 @@ int main()
     int arr[1000], n, t, key;
     char select;
     int T;
-    int count = 0;
+    static int count;
 
     cin >> T;
     for (int l = 0; l < T; l++)
