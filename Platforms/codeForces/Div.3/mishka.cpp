@@ -4,30 +4,41 @@ using namespace std;
 
 int main()
 {
-
     int n, k;
-    int t;
-    int a;
-    list<int> arr;
+    int t, a1;
+    list<int> a;
     cin >> n >> k;
     int len = 0;
     for (t = 0; t < n; t++)
     {
-        cin >> a;
-        arr.push_back(a);
+        cin >> a1;
+        a.push_back(a1);
     }
 
-    for (t = 0; t < n; t++)
+    for (t = 0; t < n - len; t++)
     {
-        if (*arr.begin() <= k)
+        if (!a.empty())
         {
-            arr.pop_front();
-            len++;
+            if (*a.begin() <= k)
+            {
+                a.pop_front();
+                len++;
+            }
+            else
+                break;
         }
-        if (*arr.end() <= k)
+    }
+    for (t = 0; t < n - len; t++)
+    {
+        if (!a.empty())
         {
-            arr.pop_back();
-            len++;
+            if (*a.end() <= k)
+            {
+                a.pop_back();
+                len++;
+            }
+            else
+                break;
         }
     }
     cout << len;
