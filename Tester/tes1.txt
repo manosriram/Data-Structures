@@ -1,0 +1,123 @@
+#include <iostream>
+using namespace std;
+
+class Parent
+{
+  protected:
+    char name[100], subName[100];
+    int rollNo, subMar[100];
+    int total;
+    char grade;
+};
+
+class Derived : public Parent
+{
+  public:
+    int subCode, intMar[100], extMar[100], n;
+
+    void getInfo()
+    {
+        cout << "Enter Name :" << endl;
+        cin >> name;
+        cout << "Enter Roll Number : " << endl;
+        cin >> rollNo;
+        cout << "Enter Number of Subjects : " << endl;
+        cin >> n; 
+        int v;
+        char v1;
+        for (int t = 0; t < n; t++)
+        {
+            inf:
+            try {
+            cout << "Enter Internal Total of Subject  : " << t+1 << endl;
+            cin >> intMar[t];
+            
+            if (intMar[t] >40)
+            throw v;
+
+            cout << "Enter External Total of Subject  : " << t+1 << endl;
+            cin >> extMar[t];
+
+            if (extMar[t] >60)
+            throw v1;
+            
+            total = intMar[t] + extMar[t];
+            }
+            catch(int v) {
+                cout << "Enter Marks Below 40" << endl;
+                goto inf;
+            }
+            catch(char v1) {
+                cout << "Enter Marks Below 60" << endl;
+                goto inf;
+            }
+        }
+    }
+
+    
+
+    void createTable()
+    {
+        cout << "Name : " << this->name << endl;
+        cout << "Roll Number : " << this->rollNo << endl;
+        for (int t = 0; t < this->n; t++)
+        {
+            cout << "Internals of Subject " << t+1 << " : " << this->intMar[t] << '\n';
+            cout << "Externals of Subject " << t+1 << " : " <<  this->extMar[t] << '\n';
+            cout << "Total : " << this->total << endl;
+        }
+
+        if (this->total >=90)
+        this->grade = 'O';
+
+        else if (this->total >=80)
+        this->grade = 'A+';
+
+        else if (this->total >= 70)
+        this->grade = 'A';
+
+        else if (this->total >=60)
+        this -> grade = 'B+';
+
+        else if (this -> total>=50)
+        this->grade = 'B';
+
+        else if (this->total>=40)
+        this->grade = 'C';
+
+        else 
+        this->grade = 'F';
+
+        cout << "Grade Obtained : " << this->grade << endl;
+    }
+
+    
+};
+
+int main()
+{
+    Parent one;
+    Derived two;
+    int ch;
+while(1) {
+
+    cout << endl;
+    cout << "Choose One :\n 1.Enter Info.\n 2.List Table\n 3.Exit.\n" << '\n';
+    cin >> ch;
+
+    switch(ch) {
+        case 1:
+        two.getInfo();
+        break;
+        
+        case 2:
+        two.createTable();
+        break;
+
+        
+        case 3:
+        exit(0);
+    }
+
+}   
+}

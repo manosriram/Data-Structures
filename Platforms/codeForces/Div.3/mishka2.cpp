@@ -5,7 +5,7 @@ static int len;
 void getLenBackwards(int t, int n, int a[], int k)
 {
     int y;
-    for (y = n - 1; y >=0 ; y--)
+    for (y = n - 1; y >= t; y--)
     {
         if (a[y] <= k)
             len++;
