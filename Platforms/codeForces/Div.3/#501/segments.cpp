@@ -4,14 +4,14 @@ using namespace std;
 int main()
 {
     int n, m, b[1000], a[1000];
+    int count = 0;
     int i, j, t;
-
     cin >> n >> m;
+    int cnt = 0;
 
     for (t = 0; t < 2 * n; t++)
         cin >> a[t];
 
-    int count = 0;
     for (i = 1; i <= m; i++)
     {
         int flag = 0;
@@ -21,28 +21,28 @@ int main()
             {
                 if ((i > a[j] && i < a[j + 1])) // Element is found.
                 {
-                    break;
+                    flag = 1;
+                    count++;
                 }
-                else if (i == a[j] || i == a[j + 1])
+                else if (i == a[j] || i == a[j + 1]) // Element Equal to i.
                 {
-                    break;
-                }
-                else
-                {
-                    // j++;
-                    cout << i << " ";
-                    break;
+                    flag = 1;
+                    count++;
                 }
             }
             j++;
         }
-        //     if (flag)
-        //     {
-        //         b[count] = i;
-        //         count++;
-        //     }
-        // }
-        // for (t = 0; t < count; t++)
-        //     cout << b[t] << " ";
+        if (!flag)
+        {
+            b[cnt] = i;
+            cnt++;
+        }
     }
+
+    cout << cnt << endl;
+    for (t = 0; t < cnt; t++)
+        cout << b[t] << " ";
+
+    // if (count == i - 1)
+    //     cout << "0" << endl;
 }
