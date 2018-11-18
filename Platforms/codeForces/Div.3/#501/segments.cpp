@@ -27,7 +27,7 @@ int main()
                 {
                     break;
                 }
-                else
+                else if ()
                 {
                     // j++;
                     cout << i << " ";
