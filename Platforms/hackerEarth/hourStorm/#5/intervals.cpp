@@ -24,12 +24,9 @@ void quick(int a[], int N)
                 a[i] = a[j];
                 a[j] = temp;
             }
-<<<<<<< HEAD
-=======
             temp = a[j];
             a[j] = a[i];
             a[i] = temp;
->>>>>>> 67a7e019659594c714097281f5b6a9a3e5d91648
         }
     }
 }
@@ -59,10 +56,7 @@ int main()
     //                 cout << i + 1 << " " << j + 1 << '\n';
     //                 count++;
     //             }
-<<<<<<< HEAD
-=======
     // else continue;
->>>>>>> 67a7e019659594c714097281f5b6a9a3e5d91648
     //         }
     //     }
     // }
