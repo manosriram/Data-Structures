@@ -1,14 +1,15 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
 
+<<<<<<< HEAD
 unsigned long int mod = 1000000009;
 unsigned long long int getCarry(int n, int m)
+=======
+unsigned long long int  getCarry(unsigned long long int n, unsigned long long int m)
+>>>>>>> 96d58849b69b75002c9227c6d95ebc9ee8e2ec6a
 {
     unsigned long long int res, multiplier = 1, bitSet, result = 0;
-    if ((n % 10) + (n % 10) > 9)
-    {
-        while (n || m)
+          while (n || m)
         {
 
             res = (n % 10) + (m % 10);
@@ -19,6 +20,7 @@ unsigned long long int getCarry(int n, int m)
             m /= 10;
             multiplier *= 10;
         }
+<<<<<<< HEAD
     }
     else
     {
@@ -26,6 +28,9 @@ unsigned long long int getCarry(int n, int m)
     }
 
     return result;
+=======
+            return result;
+>>>>>>> 96d58849b69b75002c9227c6d95ebc9ee8e2ec6a
 }
 
 int main()
@@ -39,8 +44,13 @@ int main()
     while (T--)
     {
         cin >> n >> m;
+<<<<<<< HEAD
         result = getCarry(n, m) % mod;
         realResult = (n + m) % mod;
+=======
+        result = getCarry(n, m);
+        realResult = (n + m);
+>>>>>>> 96d58849b69b75002c9227c6d95ebc9ee8e2ec6a
         cout << -(result - realResult) << endl;
     }
 }
