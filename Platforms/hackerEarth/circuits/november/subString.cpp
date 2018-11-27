@@ -51,12 +51,13 @@ void getStat(char str[], char a[], int t1)
 
 int main()
 {
+    int T;
     char str[10000];
 
     // ifstream fin("input.in");
     // ofstream fout("output.out");
-
-    while (true)
+    cin >> T;
+    while (T--)
     {
 
         char a[10000], b[10000];
@@ -65,60 +66,53 @@ int main()
         int t, k;
         int flag = 0;
         int l, m;
-        try
+        cin >> str;
+        int length = strlen(str);
+        for (l = 0; l < length; l++)
         {
-            cin >> str;
-            int length = strlen(str);
-            for (l = 0; l < length; l++)
-            {
 
-                for (k = l + 1; k < length && !flag; k++)
+            for (k = l + 1; k < length && !flag; k++)
+            {
+                if (str[l] == str[k])
                 {
-                    if (str[l] == str[k])
+                    int temp = l;
+                    int temp2 = k;
+                    while (str[temp] == str[temp2])
                     {
-                        int temp = l;
-                        int temp2 = k;
-                        while (str[temp] == str[temp2])
-                        {
-                            a[j] = str[temp2];
-                            temp++;
-                            temp2++;
-                            j++;
-                            flag = 1;
-                        }
+                        a[j] = str[temp2];
+                        temp++;
+                        temp2++;
+                        j++;
+                        flag = 1;
                     }
-                    else
-                        continue;
                 }
+                else
+                    continue;
             }
+        }
 
-            while (str[i] == str[j])
-            {
-                a[j] = str[j];
-                i++;
-                j++;
-            }
-            i -= j;
+        while (str[i] == str[j])
+        {
+            a[j] = str[j];
+            i++;
+            j++;
+        }
+        i -= j;
 
-            for (t = 0; t < length; t++)
+        for (t = 0; t < length; t++)
+        {
+            for (int t1 = t + 1; t1 < length; t1++)
             {
-                for (int t1 = t + 1; t1 < length; t1++)
+                if (str[t1] == a[t])
                 {
-                    if (str[t1] == a[t])
-                    {
 
-                        if (checkStat(str, t, length, a))
-                        {
-                            getStat(str, a, t1);
-                        }
+                    if (checkStat(str, t, length, a))
+                    {
+                        getStat(str, a, t1);
                     }
                 }
             }
-            cout << str << endl;
         }
-        catch (...)
-        {
-            break;
-        }
+        cout << str << endl;
     }
 }
