@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    unsigned long long T, t;
+    unsigned long long int T, t;
     unsigned long long int n, ht;
 
     cin >> n >> ht;
