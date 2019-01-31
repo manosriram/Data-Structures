@@ -29,15 +29,35 @@ int countNodes(node *root, int count)
     }
     return count;
 }
+
+bool areIdentical(node *root1, node *root2)
+{
+    if (!root1 && !root2)
+        return 1;
+    if (!root1 || !root2)
+        return 0;
+
+    return (root1->data == root2->data && areIdentical(root1->left, root2->left) && areIdentical(root1->right, root2->right));
+}
+
 int main()
 {
 
     int n, ch, counted;
     static int count;
     node *root = new node();
+    node *root1 = new node();
+    node *root2 = new node();
+    insert(root1, 19);
+    insert(root1, 29);
+    insert(root1, 39);
+    insert(root2, 19);
+    insert(root2, 29);
+    insert(root2, 39);
     while (1)
     {
-        cout << "1.Insert 2.Height 3.Count Nodes 4.Exit" << endl;
+        cout << "1.Insert 2.Height 3.Count Nodes 4.Exit 5.Identical Or Not.\n"
+             << endl;
         cin >> ch;
         switch (ch)
         {
@@ -54,6 +74,17 @@ int main()
             counted = countNodes(root, count);
             // count = 0;
             cout << counted << endl;
+            break;
+
+        case 5:
+            if (areIdentical(root1, root2))
+            {
+                cout << "Identical" << endl;
+            }
+            else
+            {
+                cout << "Not Identical.." << endl;
+            }
             break;
 
         case 4:
