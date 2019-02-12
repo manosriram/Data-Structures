@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
-
 struct node
 {
     struct node *children[26];
     bool isEnd;
+    int cnt;
 };
 
 struct node *getNode()
@@ -31,6 +31,7 @@ void insert(struct node *root, string key)
         }
         crawl = crawl->children[index];
     }
+    root->cnt++;
     crawl->isEnd = true;
 }
 
@@ -48,9 +49,27 @@ bool search(struct node *root, string key)
     return crawl->isEnd;
 }
 
+void getMax(struct node *root, string keys[], int n)
+{
+    int max = 0, index;
+    struct node *crawl = root;
+    for (int t = 0; t < n; t++)
+    {
+        // if (crawl->cnt > max)
+        // {
+        //     max = crawl->cnt;
+        //     index = t;
+        // }
+        cout << crawl->cnt << endl;
+    }
+    // cout << "Maximum Times Occured String is " << keys[index] << " .. it Occured " << max << " times.." << endl;
+}
+
 int main()
 {
     string keys[] = {
+        "mano",
+        "mano",
         "mano",
         "sriram",
         "hey",
@@ -60,10 +79,14 @@ int main()
     struct node *root = getNode();
     for (int t = 0; t < n; t++)
         insert(root, keys[t]);
+
     string word;
     cin >> word;
     if (search(root, word))
         cout << "Found!" << endl;
     else
         cout << "Not Found!" << endl;
+
+    // for (int t = 0; t < n; t++)
+    getMax(root, keys, n);
 }

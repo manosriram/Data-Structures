@@ -36,9 +36,10 @@ void inOrder(node *root)
         return;
 
     inOrder(root->left);
-    inOrder(root->right);
     cout << root->data << " ";
+    inOrder(root->right);
 }
+
 int sum1 = 0, sum2 = 0;
 int sumOfNodes(node *root)
 {
@@ -49,4 +50,16 @@ int sumOfNodes(node *root)
     sum1 = sumOfNodes(root->left) + root->data;
     sum2 = sumOfNodes(root->right) + root->data;
     return max(sum1, sum2);
+}
+
+void sumofLeaves(node *root, int *sum) {
+
+    if (!root) {
+        return;
+    }
+    if (!root->left && !root->right) {
+        *sum += root->data;
+    }
+    sumofLeaves(root->left,sum);
+    sumofLeaves(root->right,sum);
 }

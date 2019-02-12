@@ -39,7 +39,7 @@ bool areIdentical(node *root1, node *root2)
 
     return (root1->data == root2->data && areIdentical(root1->left, root2->left) && areIdentical(root1->right, root2->right));
 }
-
+int sum=0;
 int main()
 {
 
@@ -86,7 +86,11 @@ int main()
                 cout << "Not Identical.." << endl;
             }
             break;
-
+        
+        case 6:
+            sumofLeaves(root,&sum);
+            cout << "Sum = " << sum << endl;
+            break;
         case 4:
             exit(0);
         }
