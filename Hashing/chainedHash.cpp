@@ -59,6 +59,7 @@ int main()
     h.insertHash(321);
     h.insertHash(321);
     h.insertHash(321);
+    h.insertHash(321);
     h.deleteHash(321);
     h.deleteHash(321);
     h.displayBuckets();
