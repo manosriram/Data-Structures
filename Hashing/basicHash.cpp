@@ -1,23 +1,33 @@
 #include <iostream>
-#include <string.h>
-#define ll long long int
-#define mod 119
 using namespace std;
 
-ll hashString(char s[])
+struct hashing
 {
-    ll hash = 0;
-    for (int t = 0; t < strlen(s); t++)
-    {
-        hash += (s[t]) - 'a';
-    }
-    return hash;
+    int value;
+    int key;
+};
+
+
+void put(int value, hashing hash[],int n) {
+    hash[value % n].value = value;
+    hash[value % n].key = (value % n);
+}
+
+int get(int key, hashing hash[]) {
+    return hash[key].value;
 }
 
 int main()
 {
-    char *st = new char[20];
-    cin >> st;
-    ll hashed = hashString(st);
-    cout << "Hash Value of the String : " << hashed << '\n';
+    int n;
+    
+    struct hashing hash[n];
+    cin >> n;
+    for (int t=0;t<n;t++) {
+        put(t+1,hash,n);
+        cout << "Inserted : " << (t+1) << endl;
+    }
+    int temp;
+    cin >> temp;
+    cout << get(temp,hash) << endl;
 }
