@@ -103,6 +103,27 @@ int findPathSum(Node *root, int sum)
     findPathSum(root->right, sum);
 }
 
+int *queue = new int[40];
+int findPath(Node *root)
+{
+    if (!root)
+        return 0;
+
+    queue[ind] = root->data;
+    ind++;
+
+    if (!root->left && !root->right)
+    {
+        for (int t = 0; t < ind; t++)
+            cout << queue[t] << " ";
+
+        cout << endl;
+    }
+    findPath(root->left);
+    findPath(root->right);
+    ind--;
+}
+
 int main()
 {
     int *store = new int[20];
@@ -118,5 +139,6 @@ int main()
     // verticalSum(root, 0, hash, store);
     // cout << leafNodes(root);
     // cout << heightOfTree(root) << '\n';
-    cout << findPathSum(root, 60) << '\n';
+    // cout << findPathSum(root, 60) << '\n';
+    findPath(root);
 }
