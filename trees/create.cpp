@@ -103,6 +103,21 @@ int findPathSum(Node *root, int sum)
     findPathSum(root->right, sum);
 }
 
+int *left, *right;
+Node *getMirror(Node *root)
+{
+    Node *temp;
+    if (!root)
+        return 0;
+    else
+    {
+        temp = root->left;
+        root->left = root->right;
+        root->right = temp;
+    }
+    return root;
+}
+
 int *queue = new int[40];
 int findPath(Node *root)
 {
@@ -149,5 +164,7 @@ int main()
     // cout << heightOfTree(root) << '\n';
     // cout << findPathSum(root, 60) << '\n';
     // findPath(root);
-    cout << sumOfAllNodes(root) << endl;
+    // cout << sumOfAllNodes(root) << endl;
+    root = getMirror(root);
+    display(root);
 }
