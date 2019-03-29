@@ -115,13 +115,21 @@ int findPath(Node *root)
     if (!root->left && !root->right)
     {
         for (int t = 0; t < ind; t++)
-            cout << queue[t] << " ";
+            cout << queue[t] << " -> ";
 
         cout << endl;
     }
     findPath(root->left);
     findPath(root->right);
     ind--;
+}
+
+int sumOfAllNodes(Node *root)
+{
+    if (!root)
+        return 0;
+
+    return (sumOfAllNodes(root->left) + sumOfAllNodes(root->right) + root->data);
 }
 
 int main()
@@ -140,5 +148,6 @@ int main()
     // cout << leafNodes(root);
     // cout << heightOfTree(root) << '\n';
     // cout << findPathSum(root, 60) << '\n';
-    findPath(root);
+    // findPath(root);
+    cout << sumOfAllNodes(root) << endl;
 }
