@@ -52,18 +52,37 @@ int findFullNodes(Node *root)
     return cnt;
 }
 
+int deepestNode(Node *root, int i)
+{
+    static int depthNode;
+    if (!root)
+    {
+        i--;
+        return 0;
+    }
+
+    deepestNode(root->left, i + 1);
+    depthNode = root->data;
+    deepestNode(root->right, i + 1);
+
+    return depthNode;
+}
+
 int main()
 {
     Node *root = NULL;
     insertNode(root, 50);
     insertNode(root, 60);
     insertNode(root, 70);
+    insertNode(root, 80);
+    insertNode(root, 90);
     insertNode(root, 55);
+    insertNode(root, 10);
     insertNode(root, 40);
-    insertNode(root, 30);
-    insertNode(root, 45);
-    insertNode(root, 85);
-    insertNode(root, 69);
+    insertNode(root, 5);
+
     // displayTree(root);
-    cout << findFullNodes(root) << endl;
+    // cout << findFullNodes(root) << endl;
+    cout << deepestNode(root, 0) << endl;
+    // deepestNode(root, 0);
 }
