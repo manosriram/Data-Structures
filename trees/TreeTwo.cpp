@@ -39,11 +39,31 @@ void displayTree(Node *root)
     }
 }
 
+int findFullNodes(Node *root)
+{
+    static int cnt;
+    if (!root)
+        return 1;
+
+    findFullNodes(root->left);
+    if (root->left && root->right)
+        cnt++;
+    findFullNodes(root->right);
+    return cnt;
+}
+
 int main()
 {
     Node *root = NULL;
-    insertNode(root, 5);
-    insertNode(root, 1);
-    insertNode(root, 2);
+    insertNode(root, 50);
+    insertNode(root, 60);
+    insertNode(root, 70);
+    insertNode(root, 55);
+    insertNode(root, 40);
+    insertNode(root, 30);
+    insertNode(root, 45);
+    insertNode(root, 85);
+    insertNode(root, 69);
     // displayTree(root);
+    cout << findFullNodes(root) << endl;
 }
