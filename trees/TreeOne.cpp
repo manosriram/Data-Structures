@@ -40,6 +40,7 @@ void display(Node *root)
         display(root->right);
     }
 }
+
 static int ind;
 int verticalSum(Node *root, int col, int hash[], int store[])
 {

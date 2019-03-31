@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 using namespace std;
 
 struct Node
@@ -54,7 +55,7 @@ int findFullNodes(Node *root)
 
 int deepestNode(Node *root, int i)
 {
-    static int depthNode;
+    static int depthNode, cnt = INT_MIN;
     if (!root)
     {
         i--;
@@ -62,10 +63,64 @@ int deepestNode(Node *root, int i)
     }
 
     deepestNode(root->left, i + 1);
-    depthNode = root->data;
+    if (i > cnt)
+    {
+        cnt = i;
+        depthNode = root->data;
+        cout << depthNode << " ";
+    }
     deepestNode(root->right, i + 1);
 
     return depthNode;
+}
+
+void getPath(Node *root, int target)
+{
+    if (!root)
+        return;
+
+    if (target > root->data)
+    {
+        cout << root->data << " ";
+        getPath(root->right, target);
+    }
+
+    else
+    {
+        cout << root->data << " ";
+        getPath(root->left, target);
+    }
+}
+
+Node *maxSumPath(Node *root)
+{
+    static Node *target;
+    static int index;
+    static int count, trackPathSum = INT_MIN;
+    static int *path = new int[30];
+
+    if (!root)
+        return 0;
+
+    path[index] = root->data;
+    index++;
+    count += root->data;
+
+    if (!root->left && !root->right)
+    {
+        if (count > trackPathSum)
+        {
+            trackPathSum = count;
+            target = root;
+        }
+    }
+
+    maxSumPath(root->left);
+    maxSumPath(root->right);
+    count -= root->data;
+    index--;
+
+    return target;
 }
 
 int main()
@@ -78,11 +133,15 @@ int main()
     insertNode(root, 90);
     insertNode(root, 55);
     insertNode(root, 10);
-    insertNode(root, 40);
     insertNode(root, 5);
+    insertNode(root, 40);
 
     // displayTree(root);
     // cout << findFullNodes(root) << endl;
-    cout << deepestNode(root, 0) << endl;
+    // cout << deepestNode(root, 0) << endl;
     // deepestNode(root, 0);
+    Node *temp;
+    temp = maxSumPath(root);
+    getPath(root, temp->data);
+    cout << endl;
 }
