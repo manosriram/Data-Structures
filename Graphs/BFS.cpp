@@ -2,55 +2,65 @@
 #include <list>
 using namespace std;
 
-bool visited[10];
-void BFS(int s, list<int> *adj)
+class Graph
 {
-    list<int> queue;
-    list<int>::iterator i;
-    visited[s] = true;
-    queue.push_back(s);
+  public:
+    int V;
+    list<int> *adj;
 
-    while (!queue.empty())
+    Graph(int V)
     {
-        int a = queue.front();
-        cout << a << " ";
-        queue.pop_front();
+        this->V = V;
+        adj = new list<int>[V];
+    }
 
-        for (i = adj[s].begin(); i != adj[s].end(); i++)
+    void addEdge(int s, int v)
+    {
+        adj[s].push_back(v);
+    }
+
+    void BFS(int s)
+    {
+        bool *visited = new bool[V];
+
+        for (int t = 0; t < V; t++)
         {
-            if (!visited[*i])
+            visited[t] = false;
+        }
+
+        list<int> queue;
+        list<int>::iterator i;
+
+        visited[s] = true;
+        queue.push_back(s);
+
+        while (!queue.empty())
+        {
+            int fr = queue.front();
+            cout << fr << " ";
+            queue.pop_front();
+
+            for (i = adj[fr].begin(); i != adj[fr].end(); i++)
             {
-                visited[*i] = true;
-                queue.push_back(*i);
+                if (!visited[*i])
+                {
+                    visited[*i] = true;
+                    queue.push_back(*i);
+                }
             }
         }
     }
-}
-
-void init(int vert)
-{
-    int t;
-    for (t = 0; t < vert; t++)
-        visited[t] = false;
-}
+};
 
 int main()
 {
-    int v, e, s, d;
-    cout << "Number of Vertices : ";
-    cin >> v;
-    cout << "Number of Edges : ";
-    cin >> e;
+    Graph g(5);
+    g.addEdge(0, 1);
+    g.addEdge(0, 2);
+    g.addEdge(1, 2);
+    g.addEdge(2, 0);
+    g.addEdge(2, 3);
+    g.addEdge(3, 3);
 
-    list<int> *adj = new list<int>[v];
-    bool *visited = new bool[v];
-
-    for (int t = 0; t < e; t++)
-    {
-        cout << "Source and Destination Vertices : ";
-        cin >> s >> d;
-        adj[s].push_back(d);
-    }
-    init(v);
-    BFS(0, adj);
+    g.BFS(2);
 }

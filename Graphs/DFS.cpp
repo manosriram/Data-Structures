@@ -3,46 +3,50 @@
 using namespace std;
 
 bool visited[10];
+list<int> *adj = new list<int>[5];
 
-void dfs(int s, bool visited[], list<int> *adj)
+void addEdge(int s, int d)
+{
+    adj[s].push_back(d);
+}
+
+void DFS(int s, list<int> *adj)
 {
     list<int>::iterator i;
+
+    cout << s << " ";
     visited[s] = true;
-    cout << "Visited : " << s << '\n';
+
     for (i = adj[s].begin(); i != adj[s].end(); i++)
     {
-        if (visited[*i] == false)
+        if (!visited[*i])
         {
-            dfs(*i, visited, adj);
+            DFS(*i, adj);
         }
     }
-    return;
 }
 
 void init(int vert)
 {
-    for (int t = 0; t < vert; t++)
+    int t;
+    for (t = 0; t < vert; t++)
         visited[t] = false;
+
+    DFS(vert, adj);
 }
 
 int main()
 {
-    int vert, edge;
-    cout << "Number of Vertices : ";
-    cin >> vert;
-    cout << "Number of Edges : ";
-    cin >> edge;
-    int s, d;
+    int v, e, s, d;
 
-    list<int> *adj = new list<int>[vert];
+    addEdge(0, 1);
+    addEdge(0, 2);
+    addEdge(1, 2);
+    addEdge(2, 0);
+    addEdge(2, 3);
+    addEdge(3, 3);
 
-    for (int t = 0; t < edge; t++)
-    {
-        cout << "Source and Destination Vertices : ";
-        cin >> s >> d;
-        adj[s].push_back(d);
-    }
-
-    init(vert);
-    dfs(2, visited, adj);
+    cout << "DFS Order : ";
+    init(2);
+    cout << endl;
 }
