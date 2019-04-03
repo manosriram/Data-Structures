@@ -8,25 +8,21 @@ int leastCommonAncestor(Node *root, int d1, int d2)
         return 0;
 
     int left = leastCommonAncestor(root->left, d1, d2);
-    if (root->data == d1 || root->data == d2)
-    {
-        return root->data;
-    }
 
-    if (left != 0)
-        return left;
+    if (root->data == d1 || root->data == d2)
+        return root->data;
 
     int right = leastCommonAncestor(root->right, d1, d2);
-
     if (left != 0 && right != 0)
         return root->data;
+
     if (left == 0 && right == 0)
         return 0;
 
-    // return left != 0 ? left : right;
-
-    // if () {}
-    return right;
+    if (left != 0)
+        return left;
+    else
+        return right;
 }
 
 int main()
@@ -39,8 +35,8 @@ int main()
     insertNode(root, 95);
     insertNode(root, 40);
     insertNode(root, 6);
-    insertNode(root, 2);
     insertNode(root, 7);
+    insertNode(root, 2);
     insertNode(root, 8);
 
     cout << "Least Common Ancestor is : " << leastCommonAncestor(root, 2, 8) << endl;
