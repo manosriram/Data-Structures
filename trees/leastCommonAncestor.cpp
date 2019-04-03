@@ -13,6 +13,7 @@ int leastCommonAncestor(Node *root, int d1, int d2)
         return root->data;
 
     int right = leastCommonAncestor(root->right, d1, d2);
+
     if (left != 0 && right != 0)
         return root->data;
 
