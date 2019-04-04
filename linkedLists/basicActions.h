@@ -17,7 +17,7 @@ Node *createNode(Node *start, int data)
     return start;
 }
 
-void *insertAtEnd(struct Node *start, int data)
+void insertAtEnd(struct Node *start, int data)
 {
     Node *temp = new Node();
     Node *p;
@@ -30,6 +30,7 @@ void *insertAtEnd(struct Node *start, int data)
     p->next = temp;
     temp->data = data;
     temp->next = NULL;
+    return;
 }
 
 void displayNodes(struct Node *start)
@@ -43,6 +44,7 @@ void displayNodes(struct Node *start)
         p = p->next;
     }
     cout << p->data << endl;
+    return;
 }
 
 Node *insertAtStart(struct Node *start, int data)
