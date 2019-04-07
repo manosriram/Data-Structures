@@ -40,6 +40,7 @@ Problems are added frequently to this Repository.
 - [Difference in Two Linked Lists.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/difference.cpp)
 - [Detect and Remove Loop.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/detectLoop.cpp)
 - [Reverse a Linked List.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/reverseLinkedList.cpp)
+- [Remove Node without Head Pointer.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/pointersCon.cpp)
 
 ### 4. Hashing Techniques.
 
