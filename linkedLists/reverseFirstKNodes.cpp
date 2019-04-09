@@ -4,7 +4,6 @@ using namespace std;
 
 Node *reverseNodes(Node *head, int k)
 {
-    Node *start = head;
     Node *p, *q, *r, *first;
     first = head;
     p = head;
