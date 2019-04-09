@@ -18,15 +18,11 @@ Node *reverseNodes(Node *head, int k)
         q = r;
         r = r->next;
         k--;
-
-        if (k == 1)
-        {
-            q->next = p;
-            first->next = r;
-            head = q;
-            return head;
-        }
     }
+    q->next = p;
+    first->next = r;
+    head = q;
+    return head;
 }
 
 int main()
@@ -46,6 +42,11 @@ int main()
     insertAtEnd(head, 8);
     insertAtEnd(head, 9);
 
-    head = reverseNodes(head, k - 1);
-    displayNodes(head);
+    if (k > 1)
+    {
+        head = reverseNodes(head, (k - 1));
+        displayNodes(head);
+    }
+    else
+        cout << "K must atleast be 2." << '\n';
 }
