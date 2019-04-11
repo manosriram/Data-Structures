@@ -127,6 +127,57 @@ struct node *deleteFirstElement(struct node *start)
     return start;
 }
 
+void createLoop(struct node *start,int n) {
+    node *p,*q;
+    p=start;
+    q=start;
+    while(p->next != NULL) {
+        p = p->next;
+    }
+    while (n--) {
+        q = q->next;
+    }
+    p->next = q;
+}
+
+int findLoop(struct node *start) {
+    node *p,*q;
+    int flag=0;
+    p = start;
+    q = start;
+    while (q->next && p && q) {
+            p=p->next;
+            q = q->next->next;
+        if (p == q) {
+            flag=1;
+            break;
+        }
+    }
+    if (flag) {
+        p = start;
+        while (p!=q) {
+            p = p->next;
+            q = q->next;
+        }
+        return p->data;
+    }
+    return 0;
+    }
+
+struct node *reverseList(struct node *start) {
+    node *prv,*nxt,*cur;
+    cur = NULL;
+    nxt = NULL;
+
+    while (start) {
+       nxt = start->next;
+       start->next = cur;
+       cur = start;
+       start = nxt;
+    }
+    return cur;
+}
+
 int main()
 {
     node *start;
@@ -140,18 +191,11 @@ int main()
     insertNodeAtEnd(start, 3232);
     start = insertAtStart(start, 3412);
     displayNodes(start);
+
     cout << endl;
-    findMiddle(start);
-    deleteMiddleElement(start);
-    cout << "After deleting Middle Element : " << endl;
+   
+    start = reverseList(start);
     cout << endl;
-    displayNodes(start);
-    deleteLastElement(start);
-    cout << "After deleting Last Element : " << endl;
-    cout << endl;
-    displayNodes(start);
-    start = deleteFirstElement(start);
-    cout << "After Deleting First Element : " << endl;
     displayNodes(start);
     cout << endl;
 }
