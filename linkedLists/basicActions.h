@@ -7,7 +7,7 @@ struct Node
     struct Node *next;
 };
 
-Node *createNode(Node *start, int data)
+Node *createNode(Node *&start, int data)
 {
     Node *temp = new Node();
 
@@ -17,20 +17,32 @@ Node *createNode(Node *start, int data)
     return start;
 }
 
-void insertAtEnd(struct Node *start, int data)
+void insertAtEnd(struct Node *&start, int data)
 {
     Node *temp = new Node();
     Node *p;
     p = start;
 
-    while (p->next != NULL)
+    if (!start)
     {
-        p = p->next;
+        Node *temp = new Node();
+
+        temp->next = NULL;
+        temp->data = data;
+        start = temp;
+        return;
     }
-    p->next = temp;
-    temp->data = data;
-    temp->next = NULL;
-    return;
+    else
+    {
+        while (p->next != NULL)
+        {
+            p = p->next;
+        }
+        p->next = temp;
+        temp->data = data;
+        temp->next = NULL;
+        return;
+    }
 }
 
 void displayNodes(struct Node *start)
@@ -122,4 +134,16 @@ Node *deleteFirstElement(struct Node *start)
     delete start;
     start = p;
     return start;
+}
+
+int getLength(Node *head)
+{
+    Node *p = head;
+    int count = 0;
+    while (p->next != NULL)
+    {
+        count++;
+        p = p->next;
+    }
+    return count++;
 }
