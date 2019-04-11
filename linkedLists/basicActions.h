@@ -7,16 +7,6 @@ struct Node
     struct Node *next;
 };
 
-Node *createNode(Node *&start, int data)
-{
-    Node *temp = new Node();
-
-    temp->next = NULL;
-    temp->data = data;
-    start = temp;
-    return start;
-}
-
 void insertAtEnd(struct Node *&start, int data)
 {
     Node *temp = new Node();
