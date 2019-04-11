@@ -3,9 +3,25 @@ using namespace std;
 
 struct Node
 {
+    Node *store;
     int data;
-    struct Node *next;
+    Node *next;
 };
+
+void displayAddresses(Node *start) {
+  
+  while (start->next != NULL) {
+    cout << "Address : " << start->store << " Node Data : " << start->data << endl;
+    
+    start = start->next;
+  }
+  return;
+}
+
+//void insertAddress(Node **&address, Node *target, int cnt) {
+//address[cnt]->store = target;
+//return;
+//}
 
 void insertAtEnd(struct Node *&start, int data)
 {
@@ -35,17 +51,16 @@ void insertAtEnd(struct Node *&start, int data)
     }
 }
 
-void displayNodes(struct Node *start)
+void displayNodes(Node *start)
 {
     Node *p;
     p = start;
 
-    while (p->next != NULL)
+    while (p != NULL)
     {
         cout << p->data << " -> ";
         p = p->next;
     }
-    cout << p->data << endl;
     return;
 }
 
