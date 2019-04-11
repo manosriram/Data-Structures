@@ -42,6 +42,7 @@ Problems are added frequently to this Repository.
 - [Reverse a Linked List.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/reverseLinkedList.cpp)
 - [Remove Node without Head Pointer.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/pointersCon.cpp)
 - [Reverse First K Nodes.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/reverseFirstKNodes.cpp)
+- [Even Odd Nodes.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/oddEven.cpp)
 
 ### 4. Hashing Techniques.
 
