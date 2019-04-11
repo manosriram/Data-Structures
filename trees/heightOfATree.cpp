@@ -29,6 +29,19 @@ int countNodes(node *root, int count)
     }
     return count;
 }
+static int sumT;
+int sumOfNodes(node *root)
+{
+
+    if (!root)
+        return 0;
+
+    //sumT += root -> data;
+    //sum1 = sumOfNodes(root->left) + root->data;
+    //sum2 = sumOfNodes(root->right) + root->data;
+    return (root -> data + sumOfNodes(root->right) + sumOfNodes(root->left));
+}
+
 int main()
 {
 
@@ -55,9 +68,13 @@ int main()
             // count = 0;
             cout << counted << endl;
             break;
-
+	    
         case 4:
             exit(0);
+
+	case 5:
+	  cout << sumOfNodes(root);
+	  break;
         }
     }
 }
