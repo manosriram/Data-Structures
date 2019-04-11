@@ -1,34 +1,24 @@
 #include <iostream>
-#include "basicTree.h"
+#include "basicTreeTemplate.h"
 using namespace std;
 
-int maximumNode(int a, int b)
+int heightOfTree(Node *root)
 {
-    return a > b ? a : b;
-}
-
-int heightTree(node *root)
-{
+    int leftH, rightH;
     if (!root)
-        return -1;
-
-    int leftTree = heightTree(root->left);
-    int rightTree = heightTree(root->right);
-
-    return maximumNode(leftTree, rightTree) + 1;
-}
-
-int countNodes(node *root, int count)
-{
-
-    if (root)
+        return 0;
+    else
     {
-        countNodes(root->left, count + 1);
-        countNodes(root->right, count + 1);
-        // count += 1;
+        leftH = heightOfTree(root->left);
+        rightH = heightOfTree(root->right);
+
+        if (leftH > rightH)
+            return leftH + 1;
+        else
+            return rightH + 1;
     }
-    return count;
 }
+<<<<<<< HEAD
 static int sumT;
 int sumOfNodes(node *root)
 {
@@ -78,3 +68,19 @@ int main()
         }
     }
 }
+=======
+
+int main() {
+    Node *root = NULL;
+    insertNode(root, 50);
+    insertNode(root, 60);
+    insertNode(root, 70);
+    insertNode(root, 80);
+    insertNode(root, 90);
+    insertNode(root, 55);
+    insertNode(root, 10);
+    insertNode(root, 5);
+    insertNode(root, 40);
+    cout << heightOfTree(root) << endl;
+}
+>>>>>>> 6bfc6775bd59bd4b5658a32d9397e9dbf10a6c67
