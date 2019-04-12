@@ -18,12 +18,15 @@ Node *oddEven(Node *head)
         }
         p = p->next;
     }
-    p = head2;
-    while (p != NULL)
-    {
-        insertAtEnd(head1, p->data);
-        p = p->next;
+    p = head1;
+
+    while (p->next != NULL) {
+      p = p->next;
     }
+    
+    p->next = head2;
+    
+    
     return head1;
 }
 

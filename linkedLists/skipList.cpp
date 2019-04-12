@@ -8,6 +8,7 @@ Node *skipList(Node *head, int data, Node *expressHead) {
   Node *temp = NULL;
   
   while (p != NULL) {
+
     if (p->next->data > data) {
       p = p->next;
       break;
@@ -36,12 +37,12 @@ return temp;
 Node *buildList(Node *head) {
   int n = 4;
   Node *p = head;
-  Node **forward = NULL;
+  Node *forward;
   int counter=0;
   bool first=false;
   
  
-  Node *temp = *forward;
+  // Node *temp = forward;
 
   int cnt=0;
   while (p != NULL) {
@@ -49,22 +50,10 @@ Node *buildList(Node *head) {
     if (counter == n || first==false ) {
       first = true;
       
-      insertAtEnd(*forward,p->data);
-      *forward[cnt]->store=p;
-      // insertAddress(forward,p,cnt);
-      
-      // cout << forward -> store->data << endl;
-      
-      cout << endl;
-      // displayNodes(forward[cnt]->store);
-      cout << forward[cnt]->store;
-      cnt++;
-      counter=0;
     }
-    counter++;
-    p = p->next;
-  }
-  return *forward;
+
+    
+  //return *forward;
 }
 
 
