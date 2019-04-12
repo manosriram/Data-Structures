@@ -6,6 +6,7 @@ struct Node
     Node **store;
     int data;
     Node *next;
+<<<<<<< HEAD
 };
 
 void displayAddresses(Node *start) {
@@ -24,6 +25,12 @@ void displayAddresses(Node *start) {
 //}
 
 void insertAtEnd(struct Node *&start, int data)
+=======
+    Node **express;
+};
+
+void insertAtEnd(Node *&start, int data)
+>>>>>>> 0efb2e596d566135d9cc42a7352add4385d2c7b1
 {
     Node *temp = new Node();
     Node *p;
@@ -64,7 +71,7 @@ void displayNodes(Node *start)
     return;
 }
 
-Node *insertAtStart(struct Node *start, int data)
+Node *insertAtStart(Node *start, int data)
 {
     Node *temp = new Node();
     temp = new Node;
@@ -75,7 +82,7 @@ Node *insertAtStart(struct Node *start, int data)
     return start;
 }
 
-int findMiddle(struct Node *start)
+int findMiddle(Node *start)
 {
     Node *p;
     p = start;
@@ -95,7 +102,7 @@ int findMiddle(struct Node *start)
     return p->data;
 }
 
-void deleteMiddleElement(struct Node *start)
+void deleteMiddleElement(Node *start)
 {
     Node *p, *q;
     p = start;
@@ -117,7 +124,7 @@ void deleteMiddleElement(struct Node *start)
     delete p;
 }
 
-void deleteLastElement(struct Node *start)
+void deleteLastElement(Node *start)
 {
     Node *p, *q;
     p = start;
@@ -132,7 +139,7 @@ void deleteLastElement(struct Node *start)
     return;
 }
 
-Node *deleteFirstElement(struct Node *start)
+Node *deleteFirstElement(Node *start)
 {
     Node *p;
     p = start->next;
