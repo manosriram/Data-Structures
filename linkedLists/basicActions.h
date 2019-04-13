@@ -82,12 +82,12 @@ Node *insertAtStart(Node *start, int data)
     return start;
 }
 
-int findMiddle(Node *start)
+Node *findMiddle(Node *start)
 {
     Node *p;
     p = start;
     int count = 0;
-    while (p->next != NULL)
+    while (p != NULL)
     {
         p = p->next;
         count++;
@@ -99,7 +99,7 @@ int findMiddle(Node *start)
         p = p->next;
         i++;
     }
-    return p->data;
+    return p;
 }
 
 void deleteMiddleElement(Node *start)
