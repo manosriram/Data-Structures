@@ -11,7 +11,7 @@ int main()
 {
     Node *head = NULL;
 
-    head = createNode(head, 10);
+    insertAtEnd(head, 10);
     insertAtEnd(head, 20);
     insertAtEnd(head, 4);
     insertAtEnd(head, 30);
