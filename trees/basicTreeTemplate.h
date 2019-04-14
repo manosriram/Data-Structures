@@ -29,12 +29,32 @@ Node *insertNode(Node *&root, int data)
     return root;
 }
 
-void displayTree(Node *root)
+void displayTreePreorder(Node *root)
 {
     if (root)
     {
         cout << root->data << " ";
-        displayTree(root->left);
-        displayTree(root->right);
+        displayTreePreorder(root->left);
+        displayTreePreorder(root->right);
+    }
+}
+
+void displayTreePostorder(Node *root)
+{
+    if (root)
+    {
+        displayTreePostorder(root->left);
+        displayTreePostorder(root->right);
+        cout << root->data << " ";
+    }
+}
+
+void displayTreeInorder(Node *root)
+{
+    if (root)
+    {
+        displayTreeInorder(root->left);
+        cout << root->data << " ";
+        displayTreeInorder(root->right);
     }
 }

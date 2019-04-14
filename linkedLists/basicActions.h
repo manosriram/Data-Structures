@@ -6,31 +6,10 @@ struct Node
     Node **store;
     int data;
     Node *next;
-<<<<<<< HEAD
-};
-
-void displayAddresses(Node *start) {
-  
-  while (start->next != NULL) {
-    cout << "Address : " << start->store << " Node Data : " << start->data << endl;
-    
-    start = start->next;
-  }
-  return;
-}
-
-//void insertAddress(Node **&address, Node *target, int cnt) {
-//address[cnt]->store = target;
-//return;
-//}
-
-void insertAtEnd(struct Node *&start, int data)
-=======
     Node **express;
 };
 
 void insertAtEnd(Node *&start, int data)
->>>>>>> 0efb2e596d566135d9cc42a7352add4385d2c7b1
 {
     Node *temp = new Node();
     Node *p;
