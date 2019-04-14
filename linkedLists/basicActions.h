@@ -3,10 +3,9 @@ using namespace std;
 
 struct Node
 {
-    Node **store;
     int data;
     Node *next;
-    Node **express;
+    Node *point;
 };
 
 void insertAtEnd(Node *&start, int data)
