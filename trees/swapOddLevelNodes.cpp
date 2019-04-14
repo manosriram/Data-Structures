@@ -31,14 +31,17 @@ int main()
     insertNode(root, 55);
     insertNode(root, 60);
     insertNode(root, 66);
+    insertNode(root, 59);
     insertNode(root, 10);
     insertNode(root, 23);
     insertNode(root, 90);
+    insertNode(root, 88);
 
     swapOddLevel(root);
 
     list<int>::iterator i;
 
+    // store.reverse();
     for (i = store.begin(); i != store.end(); i++)
     {
         cout << *i << " ";
