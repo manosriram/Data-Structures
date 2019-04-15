@@ -44,6 +44,7 @@ Problems are added frequently to this Repository.
 - [Remove Node without Head Pointer.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/pointersCon.cpp)
 - [Reverse First K Nodes.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/reverseFirstKNodes.cpp)
 - [Even Odd Nodes.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/oddEven.cpp)
+- [Skip List](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/skipList.cpp)
 
 ### 4. Hashing Techniques.
 
