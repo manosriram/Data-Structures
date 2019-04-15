@@ -14,14 +14,24 @@ Node *doSkips(Node *head, int skips)
   return p;
 }
 
-/* 
+/*
+  Node Structure : 
+
+  struct Node {
+  int data;  // Holds data of the Node.
+  Node *next; // Next Node Pointer.
+  Node *point; // Points to the Inner Node .. This pointer is used in *express pointer.
+
+};
+  
+-----------------------------------------------------------------------------------------------------------------------------
+
   Building a Skip List.
   Step 1 : Start at head node.
   Step 2 : Push the Node's Data into express's "data" field.
   Step 3 : Push the Node's Address into express's "point" field.
   Step 4 : Skip 'n' Nodes.
   Step 5 : Repeat the process till the current node is not NULL.
-
 
 */
 
