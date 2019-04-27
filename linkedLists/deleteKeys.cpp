@@ -21,11 +21,13 @@ Node *deleteKeys(Node *head, int x)
 
     while (p != NULL)
     {
+        // Element Found at Last.
         if (p->next == NULL && p->data == x)
         {
             deleteLastElement(head);
             break;
         }
+        // Element Found at Start.
         else if (p == head && p->data == x)
         {
             head = deleteFirstElement(head);
@@ -33,6 +35,7 @@ Node *deleteKeys(Node *head, int x)
             q = NULL;
             continue;
         }
+        // Element Found Somewhere else.
         else if (p->data == x)
         {
             q->next = p->next;
@@ -40,6 +43,7 @@ Node *deleteKeys(Node *head, int x)
             p = q->next;
             continue;
         }
+        // Not Found.
         q = p;
         p = p->next;
         continue;
