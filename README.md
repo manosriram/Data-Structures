@@ -9,6 +9,7 @@ Problems are added frequently to this Repository.
 ### 1. Trees.
     
 - [Basic Functions Header File.](https://github.com/manosriram/Data-Structures/blob/master/trees/basicTreeTemplate.h)
+- [Inorder Iterative](https://github.com/manosriram/Data-Structures/blob/master/trees/inorderIterative.cpp)
 - [Number of Full Nodes.](https://github.com/manosriram/Data-Structures/blob/master/trees/fullNodes.cpp)
 - [Height of a Tree.](https://github.com/manosriram/Data-Structures/blob/master/trees/heightOfATree.cpp)
 - [Is Given Tree a BST ?](https://github.com/manosriram/Data-Structures/blob/master/trees/isBST2.cpp)
