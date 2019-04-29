@@ -59,25 +59,3 @@ void displayTreeInorder(Node *root)
         displayTreeInorder(root->right);
     }
 }
-
-void inorderIterative(Node *root)
-{
-    Node *p = root;
-    stack<Node *> q;
-
-    while (1)
-    {
-        while (root)
-        {
-            q.push(root);
-            root = root->left;
-        }
-        if (q.empty())
-            break;
-
-        root = q.top();
-        cout << root->data << " ";
-        q.pop();
-        root = root->right;
-    }
-}
