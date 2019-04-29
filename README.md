@@ -45,6 +45,7 @@ Problems are added frequently to this Repository.
 - [Reverse First K Nodes.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/reverseFirstKNodes.cpp)
 - [Even Odd Nodes.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/oddEven.cpp)
 - [Skip List](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/skipList.cpp)
+- [Delete Key](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/deleteKeys.cpp)
 
 ### 4. Hashing Techniques.
 
