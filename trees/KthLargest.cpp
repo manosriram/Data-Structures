@@ -3,61 +3,50 @@
 #include "basicTreeTemplate.h"
 using namespace std;
 static int top = -1;
-class Stack
+Node *a[100];
+
+void push(Node *root)
 {
-    Node *a[100];
+    top++;
+    a[top] = root;
+}
 
-public:
-    void push(Node *root)
-    {
-        if (top >= 0)
-        {
-            top++;
-            a[top] = root;
-        }
-    }
+void pop()
+{
+    top--;
+}
 
-    void pop()
-    {
-        top--;
-    }
+Node *topElement()
+{
+    return a[top];
+}
 
-    Node *topEl()
-    {
-        return a[top];
-    }
-
-    bool empty()
-    {
-        return (top == -1) ? true : false;
-    }
-};
+bool isEmpty()
+{
+    return (top == -1) ? true : false;
+}
 
 void KLargestIterative(Node *root, int k)
 {
-    int a[100];
+    int b[100];
     int ind = 0;
-    Node *p = root;
-    Stack q;
-
     while (1)
     {
         while (root)
         {
-            a[ind] = root->data;
-            ind++;
-            q.push(root);
+            push(root);
             root = root->left;
         }
-        if (q.empty())
+        if (isEmpty())
             break;
 
-        root = q.topEl();
-        q.pop();
+        root = topElement();
+        b[ind] = root->data;
+        ind++;
+        pop();
         root = root->right;
     }
-    sort(a, a + ind);
-    // cout << a[ind - k] << endl;
+    cout << b[ind - k] << '\n';
 }
 
 int main()
@@ -74,7 +63,4 @@ int main()
     cin >> k;
 
     KLargestIterative(root, k);
-
-    // int *arr = KLargest(root, k);
-    // cout << arr[ind - k] << '\n';
 }
