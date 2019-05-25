@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     struct TrieNode *root = createNode();
 
-    string paragraph[] = {"hey" "there", "i", "am", "manosriram", "and" ,"this" ,"is" ,"an" ,"example" ,"of" ,"trie" ,"data" ,"structure"};
+    string paragraph[] = {"hey" "there", "i", "am","manosrira" ,"manosriram", "and" ,"this" ,"is" ,"an" ,"example" ,"of" ,"trie" ,"data" ,"structure","manomano"};
 
     int n = sizeof(paragraph)/sizeof(paragraph[0]);
     for (int t=0;t<n;t++) {

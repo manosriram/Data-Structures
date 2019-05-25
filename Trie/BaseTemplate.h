@@ -30,10 +30,10 @@ void insert(string key, struct TrieNode *root)
     for (int t=0;t<key.length();t++) {
         int index = key[t] - 'a';
 
-        if (!crawl->children[index]) 
+        if (!crawl->children[index])  {
             crawl->children[index] = createNode();
+        }
 
-    
         crawl = crawl->children[index]; 
     }
     crawl->eOF = true;
