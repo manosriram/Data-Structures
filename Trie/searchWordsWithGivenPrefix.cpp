@@ -5,7 +5,6 @@ using namespace std;
 int main()
 {
     struct TrieNode *root = createNode();
-
     string paragraph[] = {"hey"
                           "there",
                           "i", "am", "manosrira", "manosriram", "and", "this", "is", "an", "example", "of", "trie", "data", "structure", "manomano", "hello", "helium", "heart", "hate"};
@@ -15,7 +14,12 @@ int main()
     {
         insert(paragraph[t], root);
     }
-    string key;
-    cin >> key;
-    search(key, root) ? cout << "Word found !" << '\n' : cout << "Word Not Found." << '\n';
+    string query;
+    cin >> query;
+    int res = autoSuggest(root, query);
+    if (res == -1)
+        cout << "No Other Words found other than the Prefix Itself !" << '\n';
+
+    if (!res)
+        cout << "No Words found with this Prefix" << '\n';
 }
