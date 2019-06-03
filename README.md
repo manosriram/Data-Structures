@@ -66,3 +66,4 @@ Problems are added frequently to this Repository.
 
 ### 7. Stack.
 - [Basic Stack Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/stacks)
+- [Reverse Words in a String.](https://github.com/manosriram/Data-Structures/blob/master/stacks/reverseString.cpp)
