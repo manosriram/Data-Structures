@@ -22,8 +22,7 @@ char pop() {
 
 void combineString() {
     while (top > -1) {
-        Rstr += stack[top];
-        top--;
+        Rstr += pop();
     }
     Rstr += " ";
     return;
