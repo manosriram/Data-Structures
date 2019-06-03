@@ -48,7 +48,12 @@ Problems are added frequently to this Repository.
 - [Skip List](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/skipList.cpp)
 - [Delete Key](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/deleteKeys.cpp)
 
-### 4. Hashing Techniques.
+### 4. Trie.
+- [Basic Trie Template (C++)](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.h)
+- [Basic Trie Template (JS)](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.js)
+- [Search Word in a Trie](https://github.com/manosriram/Data-Structures/blob/master/Trie/searchWord.cpp)
+
+### 5. Hashing Techniques.
 
 - [Basic Hash.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/basicHash.cpp)
 - [Basic Hashing using STL.](https://github.com/manosriram/Data-Structures/blob/master/Topics/hashTable/hashTable.h)
@@ -56,8 +61,8 @@ Problems are added frequently to this Repository.
 - [Linear Probing.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/linearProbing.cpp)
 - [Check Free Index and Place.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/tester.cpp)
 
-### 5. Queue.
+### 6. Queue.
 - [Basic Queue Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/queue)
 
-### 6. Stack.
+### 7. Stack.
 - [Basic Stack Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/stacks)
