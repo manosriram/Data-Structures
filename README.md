@@ -7,7 +7,7 @@ Problems are added frequently to this Repository.
 ```
 
 ### 1. Trees.
-    
+
 - [Basic Functions Header File.](https://github.com/manosriram/Data-Structures/blob/master/trees/basicTreeTemplate.h)
 - [Inorder Iterative](https://github.com/manosriram/Data-Structures/blob/master/trees/inorderIterative.cpp)
 - [Number of Full Nodes.](https://github.com/manosriram/Data-Structures/blob/master/trees/fullNodes.cpp)
@@ -18,6 +18,7 @@ Problems are added frequently to this Repository.
 - [Least Common Ancestor.](https://github.com/manosriram/Data-Structures/blob/master/trees/leastCommonAncestor.cpp)
 - [Sum of Left Sub-Tree.](https://github.com/manosriram/Data-Structures/blob/master/trees/leftSubTreeSum.cpp)
 - [Sum of Right Sub-Tree.](https://github.com/manosriram/Data-Structures/blob/master/trees/rightSubTreeSum.cpp)
+- [Sum of Left Leaf Nodes.](https://github.com/manosriram/Data-Structures/blob/master/LeetCode/leftLeavesSum.cpp)
 - [Path with Maximum Sum.](https://github.com/manosriram/Data-Structures/blob/master/trees/maxSumPath.cpp)
 - [Print the Mirror of the Tree.](https://github.com/manosriram/Data-Structures/blob/master/trees/mirrorTree.cpp)
 - [Print Nodes At Distance K from Root.](https://github.com/manosriram/Data-Structures/blob/master/trees/nodesAtDistanceK.cpp)
