@@ -3,37 +3,47 @@
 #define max 100
 using namespace std;
 static string Rstr;
-static int top=-1;
+static int top = -1;
 char stack[max];
 
-void push(char value) {
-    if (top < max) {
+void push(char value)
+{
+    if (top < max)
+    {
         top++;
         stack[top] = value;
     }
     return;
 }
 
-char pop() {
+char pop()
+{
     char temp = stack[top];
     top--;
     return temp;
 }
 
-void combineString() {
-    while (top > -1) {
+void combineString()
+{
+    while (top > -1)
+    {
         Rstr += pop();
     }
     Rstr += " ";
     return;
 }
 
-void reverseWords(char a[]) {
+void reverseWords(char a[])
+{
     int t;
-    for (t=strlen(a)-1;t>=0;t--) {
-        if (a[t] == ' ') {
+    for (t = strlen(a) - 1; t >= 0; t--)
+    {
+        if (a[t] == ' ')
+        {
             combineString();
-        } else {
+        }
+        else
+        {
             push(a[t]);
         }
     }
@@ -41,9 +51,10 @@ void reverseWords(char a[]) {
     return;
 }
 
-int main(){
+int main()
+{
     char a[40];
-    cin.getline(a,40);
+    cin.getline(a, 40);
     reverseWords(a);
-    cout << Rstr << '\n';
+    cout << Rstr << endl;
 }
