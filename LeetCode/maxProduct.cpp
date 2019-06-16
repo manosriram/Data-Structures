@@ -1,20 +1,33 @@
 #include <iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 int maxProduct(int a[], int n)
 {
-    int currentProd = 1, maxProd = INT_MIN;
+    int temp = 1;
+    int store[100];
+    int count = 0;
+    vector<int> vec;
+
+    a[n] = INT_MIN;
+
     for (int t = 0; t < n; t++)
     {
-        currentProd *= a[t];
+        temp *= a[t];
 
-        if (currentProd > maxProd)
-            maxProd = currentProd;
-
-        if (currentProd <= 0)
-            currentProd = 1;
+        if ((a[t] >= 0 && a[t + 1] < 0) || (a[t] < 0 && a[t + 1] >= 0))
+        {
+            store[count] = temp;
+            count++;
+            temp = 1;
+        }
     }
-    return maxProd;
+    store[count] = temp;
+    count++;
+
+    sort(store, store + count);
+    return store[count - 1];
 }
 
 int main()
