@@ -6,9 +6,8 @@ using namespace std;
 int maxProduct(int a[], int n)
 {
     int temp = 1;
-    int store[100];
+    int store[n];
     int count = 0;
-    vector<int> vec;
 
     a[n] = INT_MIN;
 
