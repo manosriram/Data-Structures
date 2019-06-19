@@ -72,10 +72,7 @@ bool isLastNode(struct TrieNode *root)
 void suggestWords(string prefix, struct TrieNode *root)
 {
     if (root->eOF == true)
-    {
-        cout << prefix;
-        cout << '\n';
-    }
+        cout << prefix << endl;
 
     if (isLastNode(root))
     {
@@ -132,9 +129,7 @@ int autoSuggest(struct TrieNode *root, const string query)
 void printDictionary(TrieNode *root)
 {
     if (root->eOF)
-    {
         cout << word << endl;
-    }
 
     if (isLastNode(root))
         return;
