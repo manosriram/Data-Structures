@@ -3,7 +3,7 @@
 #define alpha_size 26
 #define CHAR_TO_INDEX(c) ((int)c - (int)'a')
 using namespace std;
-
+string word;
 struct TrieNode
 {
     bool eOF;
@@ -127,4 +127,26 @@ int autoSuggest(struct TrieNode *root, const string query)
         return 1;
     }
     return 0;
+}
+
+void printDictionary(TrieNode *root)
+{
+    if (root->eOF)
+    {
+        cout << word << endl;
+    }
+
+    if (isLastNode(root))
+        return;
+
+    for (int t = 0; t < alpha_size; t++)
+    {
+        if (root->children[t])
+        {
+            word.push_back(97 + t);
+            printDictionary(root->children[t]);
+            word.pop_back();
+        }
+    }
+    return;
 }

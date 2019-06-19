@@ -8,7 +8,7 @@ int main()
 
     string paragraph[] = {"hey"
                           "there",
-                          "i", "am", "manosrira", "manosriram", "and", "this", "is", "an", "example", "of", "trie", "data", "structure", "manomano", "hello", "helium", "heart", "hate"};
+                          "i", "am", "manosrira", "manosriram", "and", "this", "is", "an", "example", "of", "trie", "data", "structure", "manomano", "hello", "helium", "heart", "hate", "anyways"};
 
     int n = sizeof(paragraph) / sizeof(paragraph[0]);
     for (int t = 0; t < n; t++)
@@ -16,6 +16,7 @@ int main()
         insert(paragraph[t], root);
     }
     string key;
-    cin >> key;
-    search(key, root) ? cout << "Word found !" << '\n' : cout << "Word Not Found." << '\n';
+    // cin >> key;
+    // search(key, root) ? cout << "Word found !" << '\n' : cout << "Word Not Found." << '\n';
+    printDictionary(root);
 }
