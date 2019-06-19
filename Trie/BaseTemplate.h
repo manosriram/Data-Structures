@@ -84,7 +84,6 @@ void suggestWords(string prefix, struct TrieNode *root)
         if (root->children[t])
         {
             prefix.push_back(97 + t);
-
             suggestWords(prefix, root->children[t]);
             prefix.pop_back();
         }
