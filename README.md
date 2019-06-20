@@ -53,6 +53,8 @@ Problems are added frequently to this Repository.
 - [Basic Trie Template (C++)](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.h)
 - [Basic Trie Template (JS)](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.js)
 - [Search Word in a Trie](https://github.com/manosriram/Data-Structures/blob/master/Trie/searchWord.cpp)
+- [Count Frequency of Words.](https://github.com/manosriram/Data-Structures/blob/master/Trie/maxFreq.cpp)
+- [Count Number of Words with given Prefix.](https://github.com/manosriram/Data-Structures/blob/master/Trie/countStrings.cpp)
 
 ### 5. Hashing Techniques.
 
