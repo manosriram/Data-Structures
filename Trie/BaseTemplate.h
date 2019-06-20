@@ -8,6 +8,7 @@ struct TrieNode
 {
     bool eOF;
     struct TrieNode *children[alpha_size];
+    int freq;
 };
 
 // Create and Return a New Trie Node.
@@ -38,7 +39,9 @@ void insert(string key, struct TrieNode *root)
         }
 
         crawl = crawl->children[index];
+        // crawl->freq++; Uncomment for Count of every node hit count.
     }
+    crawl->freq++; // For the count of word hit count.
     crawl->eOF = true;
 }
 
