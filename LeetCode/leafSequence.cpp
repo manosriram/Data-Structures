@@ -25,7 +25,7 @@ bool isSequenced(Node *root1, Node *root2)
     isSequenced(root1->left, root2->left);
     isSequenced(root1->right, root2->right);
     
-    return vector1 == vector2;
+    return (vector1 == vector2);
 }
 
 int main()
