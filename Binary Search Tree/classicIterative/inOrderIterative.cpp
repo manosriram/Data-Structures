@@ -9,12 +9,13 @@ void preorderTraversalIterative(Node *root, stack<Node *> st)
     {
         while (root)
         {
-            cout << root->data << " ";
             st.push(root);
             root = root->left;
         }
-        if (st.empty()) break;
+        if (st.empty())
+            break;
         root = st.top();
+        cout << root->data << " ";
         st.pop();
         root = root->right;
     }
@@ -23,7 +24,7 @@ void preorderTraversalIterative(Node *root, stack<Node *> st)
 
 int main()
 {
-    stack<Node *> s1, s2;
+    stack<Node *> s1;
     Node *root = NULL;
     insertNode(root, 50);
     insertNode(root, 60);
@@ -36,6 +37,6 @@ int main()
     insertNode(root, 47);
     insertNode(root, 30);
 
-    preorderTraversalIterative(root);
+    preorderTraversalIterative(root, s1);
     cout << endl;
 }

@@ -4,17 +4,19 @@
 using namespace std;
 queue<Node *> q;
 
-void levelOrderIterative(Node *root) {
+void levelOrderIterative(Node *root)
+{
     q.push(root);
     Node *node;
-    while (!q.empty()) {
+    while (!q.empty())
+    {
         node = q.front();
         cout << node->data << " ";
         q.pop();
 
         if (node->left)
             q.push(node->left);
-        
+
         if (node->right)
             q.push(node->right);
     }
