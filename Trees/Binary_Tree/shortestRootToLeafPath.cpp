@@ -17,8 +17,6 @@ int findPathLength(BNode *root, int target) {
             minLength = length;
             perStore = store;
         }
-        
-
     }
     length--;
     store.pop_back();
