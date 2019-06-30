@@ -7,13 +7,11 @@ int main()
     cin.sync_with_stdio(false);
     cin.tie(NULL);
 
-    int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int *tree = new int[19]; // (2*n) + 1
+    int a[] = {10, -8, 12, 3, 32, 2, -12, 0, -3};
+    int n = sizeof(a)/sizeof(a[0]);
+    int *tree = new int[(2 * n) + 1];
 
-    buildTree(a, tree, 0, 4, 1);
+    minSubArray(a, tree, 0, 4, 1);
 
-    for (int t = 0; t < 18; t++)
-        cout << tree[t] << " ";
-
-    cout << endl;
+    cout << tree[1] << endl;
 }

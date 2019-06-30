@@ -17,3 +17,19 @@ void buildTree(int *a, int *tree, int start, int end, int treeNode)
     tree[treeNode] = tree[2 * treeNode] + tree[(2 * treeNode) + 1];
     return;
 }
+
+void minSubArray(int *a, int *tree, int start, int end, int treeNode)
+{
+    if (start == end)
+    {
+        tree[treeNode] = a[start];
+        return;
+    }
+
+    int mid = (start + end) / 2;
+    minSubArray(a, tree, start, mid, 2 * treeNode);
+    minSubArray(a, tree, mid + 1, end, (2 * treeNode) + 1);
+
+    tree[treeNode] = min(tree[2 * treeNode], tree[(2*treeNode) + 1]);
+    return;
+}
