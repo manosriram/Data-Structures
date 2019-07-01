@@ -1,6 +1,26 @@
 #include <iostream>
 using namespace std;
 
+void updateTree(int *tree, int start, int end, int treeNode, int diff) {
+
+    if (start > treeNode || end < treeNode) return;
+
+    if ((start == end) && (start == treeNode)) {
+        tree[treeNode] += diff;
+        return;
+    }
+
+    if (start == end)
+        return;
+
+    if (start <= treeNode && end >= treeNode) {
+        tree[treeNode] += diff;
+        int mid = (start + end)/  2;
+        updateTree(tree, start, mid, 2 * treeNode, diff);
+        updateTree(tree, mid+1, end, (2*treeNode)+1, diff);
+    }
+}
+
 int minSubArray(int *tree, int start, int end, int qlow, int qhigh, int treeNode)
 {
     // Total Overlap

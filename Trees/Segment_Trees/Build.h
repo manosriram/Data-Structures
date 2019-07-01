@@ -3,7 +3,7 @@ using namespace std;
 
 void printTree(int *tree, int n)
 {
-    for (int t = 0; t < 2 * n; t++)
+    for (int t = 1; t < (2 * n); t++)
         cout << tree[t] << " ";
 
     cout << endl;
