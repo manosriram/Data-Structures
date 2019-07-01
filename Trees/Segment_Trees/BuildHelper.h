@@ -1,23 +1,18 @@
 #include <iostream>
 using namespace std;
 
-void updateTree(int *tree, int start, int end, int treeNode, int diff) {
+void updateSubSumTree(int *tree, int start, int end, int index, int value, int treeNode) {
 
-    if (start > treeNode || end < treeNode) return;
+    if (start == end) {
+        tree[treeNode] = value;
+    } else {
+        int mid = (start + end)/ 2;
+        
+        if (index >= start && index <= mid) updateSubSumTree(tree, start, mid, index, value, 2 * treeNode);
 
-    if ((start == end) && (start == treeNode)) {
-        tree[treeNode] += diff;
-        return;
-    }
+        else updateSubSumTree(tree, mid+1, end, index, value, (2 * treeNode) + 1);
 
-    if (start == end)
-        return;
-
-    if (start <= treeNode && end >= treeNode) {
-        tree[treeNode] += diff;
-        int mid = (start + end)/  2;
-        updateTree(tree, start, mid, 2 * treeNode, diff);
-        updateTree(tree, mid+1, end, (2*treeNode)+1, diff);
+        tree[treeNode] = tree[2 * treeNode] + tree[(2 * treeNode) + 1];
     }
 }
 
