@@ -15,5 +15,5 @@ int main()
     buildTreeMinSum(a, tree, 0, n - 1, 1);
 
     // minSubArray(tree, start, end, startingRagnge, endingRange, treeIndex);
-    cout << minSubArray(tree, 0, n - 1, 1, 3, 1) << endl;
+    cout << minSubArrayQuery(tree, 0, n - 1, 1, 3, 1) << endl;
 }

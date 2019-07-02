@@ -28,7 +28,6 @@ void buildTreeMinSum(int *a, int *tree, int start, int end, int treeNode)
     buildTreeMinSum(a, tree, mid + 1, end, (2 * treeNode) + 1);
 
     tree[treeNode] = min(tree[2 * treeNode], tree[(2 * treeNode) + 1]);
-    return;
 }
 
 void buildTreeSubSum(int *a, int *tree, int start, int end, int treeNode)

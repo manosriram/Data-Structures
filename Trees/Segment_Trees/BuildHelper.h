@@ -1,22 +1,51 @@
 #include <iostream>
 using namespace std;
 
-void updateSubSumTree(int *tree, int start, int end, int index, int value, int treeNode) {
-
-    if (start == end) {
-        tree[treeNode] = value;
-    } else {
-        int mid = (start + end)/ 2;
-        
-        if (index >= start && index <= mid) updateSubSumTree(tree, start, mid, index, value, 2 * treeNode);
-
-        else updateSubSumTree(tree, mid+1, end, index, value, (2 * treeNode) + 1);
-
-        tree[treeNode] = tree[2 * treeNode] + tree[(2 * treeNode) + 1];
-    }
+// O (logn)
+void updateTreeRangeLazy(int *tree, int *lazy, int start, int end, int low, int high, int treeNode)
+{
+    if (low > high)
+        return;
 }
 
-int minSubArray(int *tree, int start, int end, int qlow, int qhigh, int treeNode)
+// O (n)
+void updateMinTreeRange(int *tree, int start, int end, int low, int high, int diff, int treeNode)
+{
+    if (low > high)
+        return;
+
+    if (low == high)
+    {
+        tree[treeNode] = diff;
+        return;
+    }
+
+    int mid = (low + high) / 2;
+    updateMinTreeRange(tree, start, end, low, mid, diff, 2 * treeNode);
+    updateMinTreeRange(tree, start, end, mid + 1, high, diff, 2 * treeNode + 1);
+    tree[treeNode] = min(tree[2 * treeNode], tree[(2 * treeNode) + 1]);
+}
+
+// O (n)
+void updateSubSumTree(int *tree, int start, int end, int low, int high, int diff, int treeNode)
+{
+    if (low > high || start > high || end < low)
+        return;
+
+    if (low == high)
+    {
+        tree[treeNode] += diff;
+        return;
+    }
+
+    int mid = (low + high) / 2;
+    updateSubSumTree(tree, start, end, low, mid, diff, 2 * treeNode);
+    updateSubSumTree(tree, start, end, low + 1, high, diff, (2 * treeNode) + 1);
+    tree[treeNode] = tree[2 * treeNode] + tree[(2 * treeNode) + 1];
+}
+
+// O (logn)
+int minSubArrayQuery(int *tree, int start, int end, int qlow, int qhigh, int treeNode)
 {
     // Total Overlap
     if (qlow <= start && qhigh >= end)
@@ -30,10 +59,11 @@ int minSubArray(int *tree, int start, int end, int qlow, int qhigh, int treeNode
 
     int mid = (start + end) / 2;
 
-    return min(minSubArray(tree, start, mid, qlow, qhigh, (2 * treeNode)), minSubArray(tree, mid + 1, end, qlow, qhigh, (2 * treeNode) + 1));
+    return min(minSubArrayQuery(tree, start, mid, qlow, qhigh, (2 * treeNode)), minSubArrayQuery(tree, mid + 1, end, qlow, qhigh, (2 * treeNode) + 1));
 }
 
-int sumSubArray(int *tree, int start, int end, int low, int high, int treeNode)
+// O (logn)
+int sumSubArrayQuery(int *tree, int start, int end, int low, int high, int treeNode)
 {
     if (low <= start && high >= end)
         return tree[treeNode];
@@ -42,5 +72,5 @@ int sumSubArray(int *tree, int start, int end, int low, int high, int treeNode)
         return 0;
 
     int mid = (start + end) / 2;
-    return sumSubArray(tree, start, mid, low, high, (2 * treeNode)) + sumSubArray(tree, mid + 1, end, low, high, (2 * treeNode) + 1);
+    return sumSubArrayQuery(tree, start, mid, low, high, (2 * treeNode)) + sumSubArrayQuery(tree, mid + 1, end, low, high, (2 * treeNode) + 1);
 }

@@ -14,5 +14,5 @@ int main()
     int *tree = new int[(2 * n) + 1];
 
     buildTreeSubSum(a, tree, 0, n - 1, 1);
-    cout << sumSubArray(tree, 0, n - 1, 0, 2, 1) << endl;
+    cout << sumSubArrayQuery(tree, 0, n - 1, 0, 2, 1) << endl;
 }
