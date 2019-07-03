@@ -4,7 +4,7 @@ using namespace std;
 
 void printTree(int *tree, int n)
 {
-    for (int t = 1; t < (2 * n); t++)
+    for (int t = 1; t < 30; t++)
         cout << tree[t] << " ";
 
     cout << endl;
@@ -38,7 +38,7 @@ int *buildTree(int *a)
 
     int *segmentTree = new int[2 * size + 1];
 
-    for (int t=1;t<2 * size;t++)
+    for (int t=1;t < size;t++) 
         segmentTree[t] = INT_MAX;
     
     return segmentTree;
@@ -74,5 +74,19 @@ void buildTreeSubSum(int *a, int *tree, int start, int end, int treeNode)
     buildTreeSubSum(a, tree, mid + 1, end, (2 * treeNode) + 1);
 
     tree[treeNode] = tree[2 * treeNode] + tree[(2 * treeNode) + 1];
+    return;
+}
+
+void buildMaxSumArray(int a[], int *tree, int start, int end, int treeNode) {
+    if (start == end) {
+        tree[treeNode] = a[start];
+        return;
+    }
+
+    int mid = (start + end)/2;
+
+    buildMaxSumArray(a, tree, start, mid, 2 * treeNode);
+    buildMaxSumArray(a, tree, mid + 1, end, 2 * treeNode + 1);
+    tree[treeNode] = max(tree[2 * treeNode], tree[2 * treeNode + 1]);
     return;
 }
