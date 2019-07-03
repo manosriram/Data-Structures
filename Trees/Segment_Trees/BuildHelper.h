@@ -11,7 +11,7 @@ void updateTreeRangeLazy(int *tree, int *lazy, int start, int end, int low, int 
 // O (n)
 void updateMinTreeRange(int *tree, int start, int end, int low, int high, int diff, int treeNode)
 {
-    if (low > high)
+    if (low > high || start > high || end < low)
         return;
 
     if (low == high)

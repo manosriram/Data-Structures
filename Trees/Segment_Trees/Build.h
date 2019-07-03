@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
 void printTree(int *tree, int n)
@@ -12,6 +13,35 @@ void printTree(int *tree, int n)
 int getMid(int low, int high)
 {
     return (low + high) / 2;
+}
+
+bool powerL(int n)
+{
+    double temp = log(n) / log(2);
+
+    return (ceil(temp) - temp == 0) ? true : false;
+}
+
+int nextPowerOfTwo(int n)
+{
+    while (!powerL(n))
+    {
+        n++;
+    }
+    return n;
+}
+
+int *buildTree(int *a)
+{
+    int n = sizeof(a) / sizeof(a[0]);
+    int size = nextPowerOfTwo(n);
+
+    int *segmentTree = new int[2 * size + 1];
+
+    for (int t=1;t<2 * size;t++)
+        segmentTree[t] = INT_MAX;
+    
+    return segmentTree;
 }
 
 void buildTreeMinSum(int *a, int *tree, int start, int end, int treeNode)
