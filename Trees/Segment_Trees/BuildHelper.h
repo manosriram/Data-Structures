@@ -16,7 +16,7 @@ void updateMinTreeRange(int *tree, int start, int end, int low, int high, int di
 
     if (low == high)
     {
-        tree[treeNode] = diff;
+        tree[treeNode] += diff;
         return;
     }
 

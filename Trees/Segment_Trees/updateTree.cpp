@@ -11,7 +11,7 @@ int main()
 
     // int a[] = {7, 7, 11, 5, 15 , 5};
     // int a[] = {2, 3, -1, 4};
-    int a[] = {-1, 2, 4,-3, 1, 7, 1, 3, 2, -12};
+    int a[] = {-1, 2, 4, -3, 1, 7, 1, 3, 2, -12};
     int n = sizeof(a) / sizeof(a[0]);
     int *tree = new int[(2 * n) + 1];
     int *lazy = new int[(2 * n) + 1];
@@ -20,7 +20,6 @@ int main()
 
     buildTreeMinSum(a, tree, 0, n - 1, 1);
 
-    cout << minSubArrayQuery(tree, 0, n - 1, 0, 3, 1) << endl;
-    updateMinTreeRange(tree, 0, n - 1, 0, 4, 3, 1);
-    cout << minSubArrayQuery(tree, 0, n - 1, 0, 3, 1) << endl;
+    updateMinTreeRange(tree, 0, n - 1, 0, 4, 4, 1);
+    cout << minSubArrayQuery(tree, 0, n - 1, 0, 4, 1) << endl;
 }
