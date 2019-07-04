@@ -74,3 +74,18 @@ int sumSubArrayQuery(int *tree, int start, int end, int low, int high, int treeN
     int mid = (start + end) / 2;
     return sumSubArrayQuery(tree, start, mid, low, high, (2 * treeNode)) + sumSubArrayQuery(tree, mid + 1, end, low, high, (2 * treeNode) + 1);
 }
+
+void updateDiffTree(int *tree, int a[], int start, int end, int low, int high, int treeNode, int x)
+{
+    if (low > high || start > high || end < low)
+        return;
+
+    if (low == high)
+    {
+        tree[treeNode] = x;
+        return;
+    }
+    int mid = (low + high) / 2;
+    updateDiffTree(tree, a, start, end, low, mid, 2 * treeNode, x);
+    updateDiffTree(tree, a, start, end, mid + 1, high, 2 * treeNode + 1, x);
+}
