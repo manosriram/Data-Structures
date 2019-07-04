@@ -27,6 +27,8 @@ Problems are added frequently to this Repository.
 - [Kth Largest Element in a BST.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/kthLargestElement.cpp)
 - [Second Largest Element in a BST.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/secondLargest.cpp)
 - [Odd Even Level Difference](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/oddEvenLevelDifference.cpp)
+- [Boundary Traversal Iterative](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversal.cpp)
+- [Boundary Traversal Recursive](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversalRecursive.cpp)
 
 ### 2. Graphs.
 
