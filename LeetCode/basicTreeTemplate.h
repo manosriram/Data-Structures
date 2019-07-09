@@ -7,6 +7,7 @@ struct Node
     int data;
     Node *right;
     Node *left;
+    Node *next;
 };
 
 Node *insertNode(Node *&root, int data)
