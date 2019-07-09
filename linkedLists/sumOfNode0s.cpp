@@ -31,13 +31,13 @@ int main()
     insertAtEnd(head, 2);
     insertAtEnd(head, 3);
     insertAtEnd(head, 4);
-    // insertAtEnd(head, 0);
-    // insertAtEnd(head, 5);
-    // insertAtEnd(head, 4);
-    // insertAtEnd(head, 0);
-    // insertAtEnd(head, 3);
-    // insertAtEnd(head, 2);
-    // insertAtEnd(head, 0);
+    insertAtEnd(head, 0);
+    insertAtEnd(head, 5);
+    insertAtEnd(head, 4);
+    insertAtEnd(head, 0);
+    insertAtEnd(head, 3);
+    insertAtEnd(head, 2);
+    insertAtEnd(head, 0);
 
     head = sum0s(head);
     displayNodes(head);

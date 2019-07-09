@@ -7,24 +7,28 @@ Problems are added frequently to this Repository.
 ```
 
 ### 1. Trees.
-    
-- [Basic Functions Header File.](https://github.com/manosriram/Data-Structures/blob/master/trees/basicTreeTemplate.h)
-- [Number of Full Nodes.](https://github.com/manosriram/Data-Structures/blob/master/trees/fullNodes.cpp)
-- [Height of a Tree.](https://github.com/manosriram/Data-Structures/blob/master/trees/heightOfATree.cpp)
-- [Is Given Tree a BST ?](https://github.com/manosriram/Data-Structures/blob/master/trees/isBST2.cpp)
-- [Are Two Trees Isomorphic ?](https://github.com/manosriram/Data-Structures/blob/master/trees/isomorphicOrNot.cpp)
-- [Number of Leaf Nodes.](https://github.com/manosriram/Data-Structures/blob/master/trees/leafNodesCount.cpp)
-- [Least Common Ancestor.](https://github.com/manosriram/Data-Structures/blob/master/trees/leastCommonAncestor.cpp)
-- [Sum of Left Sub-Tree.](https://github.com/manosriram/Data-Structures/blob/master/trees/leftSubTreeSum.cpp)
-- [Sum of Right Sub-Tree.](https://github.com/manosriram/Data-Structures/blob/master/trees/rightSubTreeSum.cpp)
-- [Path with Maximum Sum.](https://github.com/manosriram/Data-Structures/blob/master/trees/maxSumPath.cpp)
-- [Print the Mirror of the Tree.](https://github.com/manosriram/Data-Structures/blob/master/trees/mirrorTree.cpp)
+
+- [Basic Functions Header File.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/basicTreeTemplate.h)
+- [Inorder Iterative](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/inorderIterative.cpp)
+- [Number of Full Nodes.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/fullNodes.cpp)
+- [Height of a Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/heightOfATree.cpp)
+- [Is Given Tree a BST ?](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/isBST2.cpp)
+- [Are Two Trees Isomorphic ?](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/isomorphicOrNot.cpp)
+- [Number of Leaf Nodes.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/leafNodesCount.cpp)
+- [Least Common Ancestor.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/leastCommonAncestor.cpp)
+- [Sum of Left Sub-Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/leftSubTreeSum.cpp)
+- [Sum of Right Sub-Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/rightSubTreeSum.cpp)
+- [Sum of Left Leaf Nodes.](https://github.com/manosriram/Data-Structures/blob/master/LeetCode/leftLeavesSum.cpp)
+- [Path with Maximum Sum.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/maxSumPath.cpp)
+- [Print the Mirror of the Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/mirrorTree.cpp)
 - [Print Nodes At Distance K from Root.](https://github.com/manosriram/Data-Structures/blob/master/trees/nodesAtDistanceK.cpp)
-- [Zig Zag Traversal](https://github.com/manosriram/Data-Structures/blob/master/trees/zigZagTraversal.cpp)
-- [Vertical Sum of Nodes.](https://github.com/manosriram/Data-Structures/blob/master/trees/verticalSum.cpp)
-- [Kth Largest Element in a BST.](https://github.com/manosriram/Data-Structures/blob/master/trees/kthLargestElement.cpp)
-- [Second Largest Element in a BST.](https://github.com/manosriram/Data-Structures/blob/master/trees/secondLargest.cpp)
-- [Odd Even Level Difference](https://github.com/manosriram/Data-Structures/blob/master/trees/oddEvenLevelDifference.cpp)
+- [Zig Zag Traversal](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/zigZagTraversal.cpp)
+- [Vertical Sum of Nodes.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/verticalSum.cpp)
+- [Kth Largest Element in a BST.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/kthLargestElement.cpp)
+- [Second Largest Element in a BST.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/secondLargest.cpp)
+- [Odd Even Level Difference](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/oddEvenLevelDifference.cpp)
+- [Boundary Traversal Iterative](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversal.cpp)
+- [Boundary Traversal Recursive](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversalRecursive.cpp)
 
 ### 2. Graphs.
 
@@ -45,8 +49,16 @@ Problems are added frequently to this Repository.
 - [Reverse First K Nodes.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/reverseFirstKNodes.cpp)
 - [Even Odd Nodes.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/oddEven.cpp)
 - [Skip List](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/skipList.cpp)
+- [Delete Key](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/deleteKeys.cpp)
 
-### 4. Hashing Techniques.
+### 4. Trie.
+- [Basic Trie Template (C++)](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.h)
+- [Basic Trie Template (JS)](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.js)
+- [Search Word in a Trie](https://github.com/manosriram/Data-Structures/blob/master/Trie/searchWord.cpp)
+- [Count Frequency of Words.](https://github.com/manosriram/Data-Structures/blob/master/Trie/maxFreq.cpp)
+- [Count Number of Words with given Prefix.](https://github.com/manosriram/Data-Structures/blob/master/Trie/countStrings.cpp)
+
+### 5. Hashing Techniques.
 
 - [Basic Hash.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/basicHash.cpp)
 - [Basic Hashing using STL.](https://github.com/manosriram/Data-Structures/blob/master/Topics/hashTable/hashTable.h)
@@ -54,8 +66,9 @@ Problems are added frequently to this Repository.
 - [Linear Probing.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/linearProbing.cpp)
 - [Check Free Index and Place.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/tester.cpp)
 
-### 5. Queue.
+### 6. Queue.
 - [Basic Queue Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/queue)
 
-### 6. Stack.
+### 7. Stack.
 - [Basic Stack Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/stacks)
+- [Reverse Words in a String.](https://github.com/manosriram/Data-Structures/blob/master/stacks/reverseString.cpp)
