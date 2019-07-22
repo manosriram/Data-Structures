@@ -42,7 +42,7 @@ int getRightChildIndex(int parentIndex)
 
 void printHeap(Heap *hp)
 {
-    for (int t = 1; t < hp->currentHeapSize; t++)
+    for (int t = 0; t < hp->currentHeapSize; t++)
     {
         cout << hp->heapArr[t] << " ";
     }
