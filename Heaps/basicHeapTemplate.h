@@ -42,9 +42,16 @@ int getRightChildIndex(int parentIndex)
 
 void printHeap(Heap *hp)
 {
-    for (int t = 0; t < hp->currentHeapSize; t++)
+    cout << endl;
+    for (int t = 1; t <= (hp->currentHeapSize / 2); t++)
     {
-        cout << hp->heapArr[t] << " ";
+        cout << hp->heapArr[t] << " -> ";
+        cout << " Left Child  : ";
+        cout << hp->heapArr[2 * t] << '\t';
+
+        cout << " Right Child  : ";
+        cout << hp->heapArr[(2 * t) + 1] << '\t';
+        cout << endl;
     }
     cout << endl;
     return;
