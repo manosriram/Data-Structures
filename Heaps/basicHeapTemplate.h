@@ -68,7 +68,7 @@ bool hasRightChild(Heap *hp, int index)
 void printHeap(Heap *hp)
 {
     cout << endl;
-    for (int t = 1; t < (hp->currentHeapSize / 2)+1; t++)
+    for (int t = 1; t < (hp->currentHeapSize / 2) + 1; t++)
     {
         cout << hp->heapArr[t] << " -> ";
         cout << " Left Child  : ";
@@ -84,7 +84,7 @@ void printHeap(Heap *hp)
 
 void printHeapAsArray(Heap *hp)
 {
-    for (int t = 1; t < hp->currentHeapSize + hp->shrunkenSize; t++)
+    for (int t = 1; t <= hp->currentHeapSize + hp->shrunkenSize + 1; t++)
         cout << hp->heapArr[t] << " ";
 
     cout << endl;
