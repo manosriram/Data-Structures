@@ -72,23 +72,31 @@ void heapSort(Heap *heap) {
     return;
 }
 
-int main()
-{
+Heap *initHeap() {
     Heap *heap = new Heap();
     heap->currentHeapSize = 0;
     heap->maxHeapSize = 64;
     heap->heapArr = new int[heap->maxHeapSize];
-
-    insert(heap, 1);
-    insert(heap, 4);
-    insert(heap, 5);
-    insert(heap, 90);
-    insert(heap, -90);
-    insert(heap, -40);
-    insert(heap, 3);
-
-    int size = heap->currentHeapSize;
-    buildHeap(heap, size);
-
-    heapSort(heap);
+    return heap;
 }
+
+// int main()
+// {
+//     Heap *heap = new Heap();
+//     heap->currentHeapSize = 0;
+//     heap->maxHeapSize = 64;
+//     heap->heapArr = new int[heap->maxHeapSize];
+
+//     insert(heap, 1);
+//     insert(heap, 4);
+//     insert(heap, 5);
+//     insert(heap, 90);
+//     insert(heap, -90);
+//     insert(heap, -40);
+//     insert(heap, 3);
+
+//     int size = heap->currentHeapSize;
+//     buildHeap(heap, size);
+
+//     heapSort(heap);
+// }
