@@ -38,11 +38,7 @@ Problems are added frequently to this Repository.
 
 ### 2. Graphs.
 
-- [Adjancency Matrix.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/AdjacencyGraph.cpp)
-- [Adjancency List.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/AdjacencyList.cpp)
-- [Breadth First Search.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/BFS.cpp)
-- [Depth First Search.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/DFS.cpp)
-- [Shortest Path for UnWeighted Graphs.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/shortest_BellmanFord.cpp)
+- [Intro.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/Intro.cpp)
 
 ### 3. Linked Lists.
 
