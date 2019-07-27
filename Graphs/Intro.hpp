@@ -18,15 +18,3 @@ void printGraph(vector<int> grph[], int nde) {
         cout << endl;
     }
 }
-
-int main()
-{
-    int nodes = 5;
-    vector<int> grph[nodes];
-
-    addEdge(0, 1, grph);
-    addEdge(2, 1, grph);
-    addEdge(2, 4, grph);
-    addEdge(3, 0, grph);
-    printGraph(grph, nodes);
-}
