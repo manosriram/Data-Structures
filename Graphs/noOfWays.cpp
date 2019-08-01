@@ -21,19 +21,13 @@ int findWays(vector<int> grph[], bool visited[], int src, int dest)
         qt.pop();
 
         if (root == dest)
-        {
-            visited[root] = true;
             continue;
-        }
         else
         {
             for (auto i = grph[root].begin(); i != grph[root].end(); i++)
             {
                 if (*i == dest)
-                {
                     ways++;
-                    pathCount++;
-                }
 
                 if (!visited[*i])
                 {

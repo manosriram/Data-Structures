@@ -46,33 +46,37 @@ void buildHeap(Heap *heap, int n)
 int extractMax(Heap *&heap)
 {
     int root = heap->heapArr[1];
-    
+
     swap(heap->heapArr[1], heap->heapArr[heap->currentHeapSize]);
-    
+
     heap->currentHeapSize--;
 
     heapifyDown(heap, 1, heap->currentHeapSize);
     return root;
 }
 
-void printHeap(Heap *heap, int n) {
-    for (int t=1;t<=n;t++)
+void printHeap(Heap *heap, int n)
+{
+    for (int t = 1; t <= n; t++)
         cout << heap->heapArr[t] << " ";
-    
+
     cout << endl;
     return;
 }
 
-void heapSort(Heap *heap) {
+void heapSort(Heap *heap)
+{
     int n = heap->currentHeapSize;
-    for (int t = 1;t<=n;t++) {
+    for (int t = 1; t <= n; t++)
+    {
         extractMax(heap);
     }
     printHeap(heap, n);
     return;
 }
 
-Heap *initHeap() {
+Heap *initHeap()
+{
     Heap *heap = new Heap();
     heap->currentHeapSize = 0;
     heap->maxHeapSize = 64;
