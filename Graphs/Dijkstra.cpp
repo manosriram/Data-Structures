@@ -2,25 +2,43 @@
 #include "Intro.hpp"
 using namespace std;
 
-void Dijkstra(pair<vector<int>, vector<int> > grph[], int nodes, int dist[]) {
-    
+int getMinVertex(int nodes, bool visited[], int dist[]) {
+    int min_ = INT_MAX, min_I = -1;
     for (int t=0;t<nodes;t++) {
-        for (int j=0;j<grph[t].first.size();j++) {
-            cout << "Current Node : " << char(grph[t].first[j] + 97) << endl;
-            if (dist[grph[t].first[j]] > (dist[t] + grph[t].second[j]))
-                dist[grph[t].first[j]] = dist[t] + grph[t].second[j];
-            else
-                continue;
+        if (visited[t] == false) {
+            if (dist[t] < min_) {
+                min_ = dist[t];
+                min_I = t;
+            }
         }
     }
-   
-    // printWeightedGraph(grph, nodes, dist);
+    return min_I;
+}
+
+void Dijkstra(pair<vector<int>, vector<int> > grph[], int nodes, int dist[]) {
+    bool visited[nodes + 1];
+    int minNode = 0;
+    
+    for (int t=0;t<nodes;t++)
+        visited[t] = false;
+
+    for (int t=0;t<nodes;t++) {
+        visited[t] = true;
+
+        minNode = getMinVertex(nodes, visited, dist);
+        for (int g = 0;g < grph[minNode].first.size();g++) {
+            if ((dist[minNode] + grph[minNode].second[g]) > dist[grph[minNode].first[g]])
+                dist[grph[minNode].first[g]] = (dist[t] + grph[minNode].second[g]);
+        }
+    }
+    
+    printWeightedGraph(grph, nodes, dist);
     return;
 }
 
 int main() {
     int nodes = 6;
-    int dist[6];
+    int dist[10];
     dist[0] = 0;
     for (int t=1;t<6;t++)
         dist[t] = INT_MAX;
