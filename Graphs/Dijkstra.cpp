@@ -5,11 +5,9 @@ using namespace std;
 int getMinVertex(int nodes, bool visited[], int dist[]) {
     int min_ = INT_MAX, min_I = -1;
     for (int t=0;t<nodes;t++) {
-        if (visited[t] == false) {
-            if (dist[t] < min_) {
+        if (visited[t] == false && dist[t] < min_) {
                 min_ = dist[t];
                 min_I = t;
-            }
         }
     }
     return min_I;
@@ -17,18 +15,19 @@ int getMinVertex(int nodes, bool visited[], int dist[]) {
 
 void Dijkstra(pair<vector<int>, vector<int> > grph[], int nodes, int dist[]) {
     bool visited[nodes + 1];
-    int minNode = 0;
+    int minNode;
     
     for (int t=0;t<nodes;t++)
         visited[t] = false;
 
     for (int t=0;t<nodes;t++) {
-        visited[t] = true;
 
         minNode = getMinVertex(nodes, visited, dist);
+        visited[t] = true;
         for (int g = 0;g < grph[minNode].first.size();g++) {
-            if ((dist[minNode] + grph[minNode].second[g]) > dist[grph[minNode].first[g]])
+            if ((dist[minNode] + grph[minNode].second[g]) > dist[grph[minNode].first[g]] && !visited[g])
                 dist[grph[minNode].first[g]] = (dist[t] + grph[minNode].second[g]);
+
         }
     }
     
@@ -43,7 +42,7 @@ int main() {
     for (int t=1;t<6;t++)
         dist[t] = INT_MAX;
 
-    pair <vector<int>, vector<int> > grph[nodes];
+    pair <vector<int>, vector<int> > grph[nodes + 2];
     
     addWeightedEdge(0, 1, 4, grph);
     addWeightedEdge(0, 2, 2, grph);
