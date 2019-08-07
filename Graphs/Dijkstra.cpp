@@ -13,25 +13,8 @@ int getMinVertex(int nodes, bool visited[], int dist[]) {
     return min_I;
 }
 
-void Dijkstra(pair<vector<int>, vector<int> > grph[], int nodes, int dist[]) {
-    bool visited[nodes + 1];
-    int minNode;
-    
-    for (int t=0;t<nodes;t++)
-        visited[t] = false;
-
-    for (int t=0;t<nodes;t++) {
-
-        minNode = getMinVertex(nodes, visited, dist);
-        visited[t] = true;
-        for (int g = 0;g < grph[minNode].first.size();g++) {
-            if ((dist[minNode] + grph[minNode].second[g]) > dist[grph[minNode].first[g]] && !visited[g])
-                dist[grph[minNode].first[g]] = (dist[t] + grph[minNode].second[g]);
-
-        }
-    }
-    
-    printWeightedGraph(grph, nodes, dist);
+void Dijkstra(pair< vector<int>, vector<int> > grph[], int nodes, int dist[]) {
+     
     return;
 }
 
