@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Intro.hpp"
+#include "Intro.hpp">
 using namespace std;
 
 bool removeNodeLessK(vector<int> grph[], int vtx, int *deg, bool visited[], int k)
@@ -41,5 +41,4 @@ int main()
     {
         deg[t] = grph[t].size();
     }
-    // removeNodeLessK(grph, 0, deg, visited, 2);
 }
