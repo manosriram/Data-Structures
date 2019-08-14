@@ -1,39 +1,61 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+static int minI;
 int mid, piv;
 
-int getMin(vector<int> a, int low, int high) {
+void getMin(vector<int> vt, int l, int h) {
+	if (l > h)
+		return;
 
-	if (low >= high)
-		return low;
+	mid = (l + h) / 2;
+	if (vt[mid] < vt[minI])
+		minI = mid;
 
-	mid = (low + high)/ 2;
-	piv = a[0];
-
-	if (a[mid] > piv)
-		return getMin(a, mid+1, high);
+	if (vt[l] <= vt[h])
+		return getMin(vt, l, mid-1);
 
 	else
-		return getMin(a, low, mid - 1);
+		return getMin(vt, mid+1, h);
 }
 
-int searchKey(vector<int> a, int low, int high, int tar) {
-	if (low > high)
-		return -1;
+template<class T>
+bool binSearch(T vt, int l, int h, int tar) {
 
-	if (low == high)
-		return low;
+	mid = (l + h)/2;
+	if (vt[mid] == tar)
+		return true;
 
-	if (tar > a[mid])
-		return searchKey(a, mid+1, high, tar);
+	if (l > h)
+		return false;
+
+	if (vt[mid] > tar)
+		return binSearch(vt, l, mid - 1, tar);
+	
+	else
+		return binSearch(vt, mid + 1, h, tar);
+}
+
+
+bool searchElement(vector<int> vt, int tar) {
+	int l, h, mid_;
+	l = minI;
+	h = l-1;
+	mid_ = 0;
+	getMin(vt, 0, vt.size() - 1);
+
+	if (tar == vt[mid_])
+		return true;
+
+	if (tar > vt[mid_])
+		return binSearch(vt, mid_ + 1, h, tar);
 
 	else
-		return searchKey(a, low, mid - 1, tar);
+		return binSearch(vt, l, vt.size() - 1, tar);
 }
 
 int main() {
-	int n, temp, min_;
+	int n, temp, min_, tar;
 	cin >> n;
 	std::vector<int> vt;
 
@@ -41,8 +63,8 @@ int main() {
 		cin >> temp;
 		vt.push_back(temp);
 	}
+	cin >> tar;
 
-	min_ = getMin(vt, 0, n - 1);	
-
-	cout << searchKey(vt, 0, n - 1, 2) << endl;
+	minI = (n - 1)/2;
+	cout << searchElement(vt, tar) << endl;
 }
