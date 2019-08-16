@@ -1,9 +1,7 @@
 # Data-Structures.
 
 ```
-@author A.Mano Sriram
-
-Problems are added frequently to this Repository.
+@author -> A.Mano Sriram
 ```
 
 ### 1. Trees.
