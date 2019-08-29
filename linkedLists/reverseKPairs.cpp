@@ -29,21 +29,7 @@ Node *Reverse(Node *head, int k, int First) {
 
 Node *reverseKPairs(Node *head, int k) {
 	if (!head) return NULL;
-
-	Node *p = head, *q = p;
-	int cnt = 0;
-
-	while (p != NULL && q != NULL) {
-		p = Reverse(head, k, cnt);
-		cnt++;
-		q = Reverse(head, k, cnt);
-		cnt++;
-	}
-	int l = 0;
-	while (l < k) {
-		head = head->next;
-	}
-	return head;
+	
 }
 
 
@@ -65,8 +51,7 @@ int main() {
 	insertAtEnd(head, 12);
 	insertAtEnd(head, 13);
 
-	head = Reverse(head, k, 5);
-	// head = reverseKPairs(head, k);
+	head = reverseKPairs(head, k);
 	displayNodes(head);
 	cout << endl;
 }
