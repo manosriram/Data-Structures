@@ -43,7 +43,10 @@ void displayNodes(Node *start)
 
     while (p != NULL)
     {
-        cout << p->data << " -> ";
+        if (p->next != NULL)
+            cout << p->data << " -> ";
+        else
+            cout << p->data;
         p = p->next;
     }
     return;
@@ -135,5 +138,5 @@ int getLength(Node *head)
         count++;
         p = p->next;
     }
-    return count++;
+    return ++count;
 }

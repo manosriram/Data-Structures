@@ -32,7 +32,7 @@ Node *swapPairs(Node *head)
 int main()
 {
     Node *head = NULL;
-    head = createNode(head, 1);
+    insertAtEnd(head, 1);
     insertAtEnd(head, 2);
     insertAtEnd(head, 3);
     insertAtEnd(head, 4);

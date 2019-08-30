@@ -183,7 +183,7 @@ int main()
     node *start;
     start = NULL;
 
-    start = createNode(start, 9);
+    insertNodeAtEnd(start, 9);
     insertNodeAtEnd(start, 91);
     insertNodeAtEnd(start, 41);
     insertNodeAtEnd(start, 67);

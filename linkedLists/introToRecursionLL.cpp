@@ -14,7 +14,7 @@ Node *recDis(Node *head)
 int main()
 {
     Node *head = NULL;
-    head = createNode(head, 10);
+    insertAtEnd(head, 10);
     insertAtEnd(head, 20);
     insertAtEnd(head, 30);
     insertAtEnd(head, 40);

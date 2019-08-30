@@ -43,12 +43,12 @@ int main()
     Node *head2 = NULL;
     Node *head = NULL;
     // Creation and Insertion of First List Data Elements.
-    head1 = createNode(head1, 6);
+    insertAtEnd(head1, 6);
     insertAtEnd(head1, 5);
     insertAtEnd(head1, 3);
     insertAtEnd(head1, 0);
     // Creating and Insertion of Second List Data Elements.
-    head2 = createNode(head2, 4);
+    insertAtEnd(head2, 4);
     insertAtEnd(head2, 5);
     insertAtEnd(head2, 2);
     insertAtEnd(head2, 0);
