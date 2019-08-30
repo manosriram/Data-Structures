@@ -52,6 +52,8 @@
 - [Delete Key.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/deleteKeys.cpp)
 - [Sum of 0's Nodes](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/sumOfNode0s.cpp)
 - [Palindrome or Not](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/palindrome.cpp)
+- [Reverse K Node Pairs](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/reverseKPairs.cpp)
+
 
 ### 4. Trie.
 - [Basic Trie Template (C++).](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.h)
