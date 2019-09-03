@@ -85,23 +85,12 @@ Node *reverseKPairs(Node *head, int k) {
 
 int main() {
 	Node *head = NULL;
-	insertAtEnd(head, 1);
-	insertAtEnd(head, 2);
-	insertAtEnd(head, 3);
-	insertAtEnd(head, 4);
-	insertAtEnd(head, 5);
-	insertAtEnd(head, 6);
-	insertAtEnd(head, 7);
-	insertAtEnd(head, 8);
-	insertAtEnd(head, 9);
-	insertAtEnd(head, 10);
-	insertAtEnd(head, 11);
-	insertAtEnd(head, 12);
-	insertAtEnd(head, 13);
-	insertAtEnd(head, 14);
-	insertAtEnd(head, 15);
+	int k = 4;
 
-	head = reverseKPairs(head, 3);
+	for (int t=1;t<=15;t++)
+		insertAtEnd(head, t);
+
+	head = reverseKPairs(head, k);
 	displayNodes(head);
 	cout << endl;
 }
