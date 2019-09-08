@@ -36,7 +36,7 @@
 
 ### 2. Graphs.
 
-- [Intro.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/Intro.cpp)
+- [Intro.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/Intro.hpp)
 - [BFS Traversal](https://github.com/manosriram/Data-Structures/blob/master/Graphs/BFS.cpp)
 - [DFS Traversal](https://github.com/manosriram/Data-Structures/blob/master/Graphs/DFS.cpp)
 - [Weighted Graph](https://github.com/manosriram/Data-Structures/blob/master/Graphs/weightedGraph.cpp)
