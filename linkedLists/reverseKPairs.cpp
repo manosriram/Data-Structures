@@ -85,7 +85,7 @@ Node *reverseKPairs(Node *head, int k) {
 
 int main() {
 	Node *head = NULL;
-	int k = 4;
+	int k = 5;
 
 	for (int t=1;t<=15;t++)
 		insertAtEnd(head, t);
