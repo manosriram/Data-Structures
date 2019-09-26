@@ -33,6 +33,9 @@
 - [Boundary Traversal Iterative](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversal.cpp)
 - [Nodes at a Distance D from Target Node](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/nodesAtDistanceD.cpp)
 - [Build Segment Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Segment_Trees/BuildHelper.h)
+- [BTree Node Structure.](https://github.com/manosriram/Data-Structures/blob/master/Trees/BTrees/NodeStructure.hpp)
+- [BTree Basic Functions Template.](https://github.com/manosriram/Data-Structures/blob/master/Trees/BTrees/basicTemplate.cpp)
+
 
 ### 2. Graphs.
 
@@ -66,6 +69,7 @@
 - [Search Word in a Trie.](https://github.com/manosriram/Data-Structures/blob/master/Trie/searchWord.cpp)
 - [Count Frequency of Words.](https://github.com/manosriram/Data-Structures/blob/master/Trie/maxFreq.cpp)
 - [Count Number of Words with given Prefix.](https://github.com/manosriram/Data-Structures/blob/master/Trie/countStrings.cpp)
+- [Replace String](https://github.com/manosriram/Data-Structures/blob/master/LeetCode/replaceString.cpp)
 
 
 ### 5. Heaps.
