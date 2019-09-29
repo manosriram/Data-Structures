@@ -1,2 +1,3 @@
-a.out/
-.vscode/
+/a.out
+/a.exe
+/.vscode
