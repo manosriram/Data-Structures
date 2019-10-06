@@ -89,6 +89,8 @@
 
 ### 7. Queue.
 - [Basic Queue Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/queue)
+- [Queue with linked list implementation.](https://github.com/manosriram/Data-Structures/blob/master/queue/queues_LL.cpp)
+- [Priority Queue.](https://github.com/manosriram/Data-Structures/blob/master/queue/priority_queue.cpp)
 
 ### 8. Stack.
 - [Basic Stack Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/stacks)
