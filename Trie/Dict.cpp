@@ -42,35 +42,19 @@ void displayContacts(TrieNode *root, string qry) {
 }
 
 int main() {
-    auto start = clck;
+    auto start = high_resolution_clock::now();
 
     TrieNode *root = new TrieNode();
     root = createNode();
-    insert("gforgeeks", root);
-    insert("geeksquiz", root);
-    insert("gamble", root);
-    insert("gallow", root);
+    insert("rubens", root);
+    insert("romane", root);
+    insert("romanus", root);
+    insert("romulus", root);
+    insert("ruber", root);
+    insert("rubicon", root);
+    insert("rubicundus", root);
 
-    string words[] = {
-        "abalones",
-        "Abama",
-        "abamp",
-        "abampere",
-        "abamperes",
-        "abampsbbye",
-        "Abbyville",
-        "abboccato",
-        "abbogada",
-        "Abbot",
-        "abbotcy",
-        "abbotcies",
-        "abbotnulliu"};
-
-    for (int t = 0; t < 1000000; t++) {
-        insert(words[t % 13], root);
-    }
-
-    auto stop = clck;
-    auto duration = differ;
-    cout << duration.count() << " microseconds " << endl;
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(stop - start);
+    cout << duration.count() << '\n';
 }
