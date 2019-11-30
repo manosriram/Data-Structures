@@ -16,7 +16,7 @@
 - [Least Common Ancestor.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/leastCommonAncestor.cpp)
 - [Sum of Left Sub-Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/leftSubTreeSum.cpp)
 - [Sum of Right Sub-Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/rightSubTreeSum.cpp)
-- [Sum of Left Leaf Nodes.](https://github.com/manosriram/Data-Structures/blob/master/LeetCode/leftLeavesSum.cpp)
+- [Sum of Left Leaf Nodes.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/leftLeavesSum.cpp)
 - [Path with Maximum Sum.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/maxSumPath.cpp)
 - [Print the Mirror of the Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/mirrorTree.cpp)
 - [Print Nodes At Distance K from Root.](https://github.com/manosriram/Data-Structures/blob/master/trees/nodesAtDistanceK.cpp)
@@ -27,7 +27,7 @@
 - [Odd Even Level Difference](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/oddEvenLevelDifference.cpp)
 - [Boundary Traversal Iterative](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversal.cpp)
 - [Boundary Traversal Recursive](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversalRecursive.cpp)
-- [Populate Right Pointers](https://github.com/manosriram/Data-Structures/blob/master/LeetCode/populateRightPointers.cpp)
+- [Populate Right Pointers](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/populateRightPointers.cpp)
 - [Shortest Leaf Path.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/shortestRootToLeafPath.cpp)
 - [Boundary Traversal Recursive](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversalRecursive.cpp)
 - [Boundary Traversal Iterative](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Tree/boundaryTraversal.cpp)
@@ -35,6 +35,7 @@
 - [Build Segment Tree.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Segment_Trees/BuildHelper.h)
 - [BTree Node Structure.](https://github.com/manosriram/Data-Structures/blob/master/Trees/BTrees/NodeStructure.hpp)
 - [BTree Basic Functions Template.](https://github.com/manosriram/Data-Structures/blob/master/Trees/BTrees/basicTemplate.cpp)
+- [Implementation of Radix Tree.](https://github.com/manosriram/Radix-Tree)
 
 
 ### 2. Graphs.
@@ -89,6 +90,8 @@
 
 ### 7. Queue.
 - [Basic Queue Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/queue)
+- [Queue with linked list implementation.](https://github.com/manosriram/Data-Structures/blob/master/queue/queues_LL.cpp)
+- [Priority Queue.](https://github.com/manosriram/Data-Structures/blob/master/queue/priority_queue.cpp)
 
 ### 8. Stack.
 - [Basic Stack Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/stacks)
