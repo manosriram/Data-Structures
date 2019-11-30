@@ -1,10 +1,6 @@
 # Data-Structures.
 
-```
-@author -> A.Mano Sriram
-```
-
-### 1. Trees.
+### 1. [Trees](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree)
 
 - [Basic Functions Header File.](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/basicTreeTemplate.h)
 - [Inorder Iterative](https://github.com/manosriram/Data-Structures/blob/master/Trees/Binary_Search_Tree/inorderIterative.cpp)
@@ -38,7 +34,7 @@
 - [Implementation of Radix Tree.](https://github.com/manosriram/Radix-Tree)
 
 
-### 2. Graphs.
+### 2. [Graphs](https://github.com/manosriram/Data-Structures/blob/master/Graphs)
 
 - [Intro.](https://github.com/manosriram/Data-Structures/blob/master/Graphs/Intro.hpp)
 - [BFS Traversal](https://github.com/manosriram/Data-Structures/blob/master/Graphs/BFS.cpp)
@@ -47,7 +43,7 @@
 - [No of Ways to reach From Source to Destination](https://github.com/manosriram/Data-Structures/blob/master/Graphs/noOfWays.cpp)
 - [Remove Nodes Less than K](https://github.com/manosriram/Data-Structures/blob/master/Graphs/removeLessK.cpp)
 
-### 3. Linked Lists.
+### 3. [Linked Lists](https://github.com/manosriram/Data-Structures/blob/master/linkedLists)
 
 - [Basic Linked List Function Header File.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/basicActions.h)
 - [Swap Pairs.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/swapPairs.cpp)
@@ -65,7 +61,7 @@
 - [Add Two Lists.](https://github.com/manosriram/Data-Structures/blob/master/linkedLists/addNumbers.cpp)
 
 
-### 4. Trie.
+### 4. [Trie](https://github.com/manosriram/Data-Structures/blob/master/Trie)
 - [Basic Trie Template (C++).](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.h)
 - [Basic Trie Template (JS).](https://github.com/manosriram/Data-Structures/blob/master/Trie/BaseTemplate.js)
 - [Search Word in a Trie.](https://github.com/manosriram/Data-Structures/blob/master/Trie/searchWord.cpp)
@@ -74,13 +70,13 @@
 - [Replace String](https://github.com/manosriram/Data-Structures/blob/master/LeetCode/replaceString.cpp)
 
 
-### 5. Heaps.
+### 5. [Heaps](https://github.com/manosriram/Data-Structures/blob/master/Heaps)
 - [Basic Functions.](https://github.com/manosriram/Data-Structures/blob/master/Heaps/basicHeapTemplate.h)
 - [Max Heap](https://github.com/manosriram/Data-Structures/blob/master/Heaps/MaxHeap.h)
 - [Min Heap.](https://github.com/manosriram/Data-Structures/blob/master/Heaps/MinHeap.cpp)
 - [K Largest Elements.](https://github.com/manosriram/Data-Structures/blob/master/Heaps/KLargestElements.cpp)
 
-### 6. Hashing Techniques.
+### 6. [Hashing Techniques](https://github.com/manosriram/Data-Structures/blob/master/Hashing)
 
 - [Basic Hash.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/basicHash.cpp)
 - [Basic Hashing using STL.](https://github.com/manosriram/Data-Structures/blob/master/Topics/hashTable/hashTable.h)
@@ -88,11 +84,17 @@
 - [Linear Probing.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/linearProbing.cpp)
 - [Check Free Index and Place.](https://github.com/manosriram/Data-Structures/blob/master/Hashing/tester.cpp)
 
-### 7. Queue.
-- [Basic Queue Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/queue)
+### 7. [Bloom Filter](https://github.com/manosriram/Data-Structures/blob/master/Bloom-Filter)
+- [Hash Functions.](https://github.com/manosriram/Data-Structures/blob/master/Bloom-Filter/HashFunctions.hpp)
+- [Insertion,](https://github.com/manosriram/Data-Structures/blob/master/Bloom-Filter/Insert.hpp)
+- [Check Word Presence.](https://github.com/manosriram/Data-Structures/blob/master/Bloom-Filter/Check.hpp)
+- [Main File.](https://github.com/manosriram/Data-Structures/blob/master/Bloom-Filter/src.hpp)
+
+### 7. [Queue](https://github.com/manosriram/Data-Structures/tree/master/queue)
+- [Basic Queue Function Header File.](https://github.com/manosriram/Data-Structures/blob/master/queue/basicActions.h)
 - [Queue with linked list implementation.](https://github.com/manosriram/Data-Structures/blob/master/queue/queues_LL.cpp)
 - [Priority Queue.](https://github.com/manosriram/Data-Structures/blob/master/queue/priority_queue.cpp)
 
-### 8. Stack.
-- [Basic Stack Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/stacks)
+### 8. [Stack](https://github.com/manosriram/Data-Structures/blob/master/stacks)
+- [Basic Stack Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/stacks/basicActions.h)
 - [Reverse Words in a String.](https://github.com/manosriram/Data-Structures/blob/master/stacks/reverseString.cpp)
