@@ -98,3 +98,8 @@
 ### 8. [Stack](https://github.com/manosriram/Data-Structures/blob/master/stacks)
 - [Basic Stack Function Header File.](https://github.com/manosriram/Data-Structures/tree/master/stacks/basicActions.h)
 - [Reverse Words in a String.](https://github.com/manosriram/Data-Structures/blob/master/stacks/reverseString.cpp)
+
+### 9. [Segment Tree](https://github.com/manosriram/Data-Structures/tree/master/Segment-Tree)
+- [Build Tree.](https://github.com/manosriram/Data-Structures/blob/master/Segment-Tree/buildTree.hpp)
+- [Min-Range Query.](https://github.com/manosriram/Data-Structures/blob/master/Segment-Tree/minRangeQuery.cpp)
+- [Max-Range Query.](https://github.com/manosriram/Data-Structures/blob/master/Segment-Tree/maxRangeQuery.cpp)
