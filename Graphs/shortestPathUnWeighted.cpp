@@ -24,13 +24,13 @@ void shortestDistance(int src) {
     int currentDist = 0;
     queue<int> q;
     q.push(src);
+    dist[src] = 0;
 
     while (!q.empty()) {
         int cN = q.front();
-        ++currentDist;
         for (auto it : g[cN]) {
             if (dist[it] == -1) {
-                dist[it] = currentDist;
+                dist[it] = dist[cN] + 1;
                 q.push(it);
             }
         }
