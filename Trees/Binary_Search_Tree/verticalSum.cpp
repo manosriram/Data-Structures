@@ -19,7 +19,7 @@ int verticalSum(Node *root, int col, int hash[], int store[])
 int main() {
     int *hash = new int[30];
     int *store = new int[30];
-    Node *root = NULL;
+    Node *root = nullptr;
     insertNode(root, 50);
     insertNode(root, 60);
     insertNode(root, 70);

@@ -13,8 +13,8 @@ Node *swapPairs(Node *head)
     // Setting the Pointer 'q' to the 'next' node to that of 'p'.
     q = p->next;
 
-    // Loop till both pointers have valid Node. (NOT NULL)
-    while (p != NULL && q != NULL)
+    // Loop till both pointers have valid Node. (NOT nullptr)
+    while (p != nullptr && q != NULL)
     {
         // Swapping Node's Data.
         temp = p->data;
@@ -31,7 +31,7 @@ Node *swapPairs(Node *head)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
     insertAtEnd(head, 1);
     insertAtEnd(head, 2);
     insertAtEnd(head, 3);

@@ -15,7 +15,7 @@ int secondLargest(Node *root, vector<int> &store)
 }
 int main()
 {
-    Node *root = NULL;
+    Node *root = nullptr;
     static vector<int> store;
 
     insertNode(root, 50);

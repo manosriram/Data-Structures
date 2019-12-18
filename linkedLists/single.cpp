@@ -4,10 +4,10 @@ using namespace std;
 struct node
 {
     int data;
-    struct node *next;
+    node *next;
 };
 
-struct node *createNode(struct node *start, int data)
+node *createNode(struct node *start, int data)
 {
     struct node *temp;
     temp = new node;
@@ -18,8 +18,7 @@ struct node *createNode(struct node *start, int data)
     return start;
 }
 
-void *insertNodeAtEnd(struct node *start, int data)
-{
+insertNodeAtEnd(struct node *start, int data) {
     struct node *temp;
     temp = new node;
     node *p;
@@ -47,7 +46,7 @@ void displayNodes(struct node *start)
     cout << p->data << endl;
 }
 
-struct node *insertAtStart(struct node *start, int data)
+node *insertAtStart(struct node *start, int data)
 {
     struct node *temp;
 
@@ -117,7 +116,7 @@ void deleteLastElement(struct node *start)
     return;
 }
 
-struct node *deleteFirstElement(struct node *start)
+node *deleteFirstElement(struct node *start)
 {
     node *p;
     p = start->next;
@@ -164,7 +163,7 @@ int findLoop(struct node *start) {
     return 0;
     }
 
-struct node *reverseList(struct node *start) {
+node *reverseList(struct node *start) {
     node *prv,*nxt,*cur;
     cur = NULL;
     nxt = NULL;

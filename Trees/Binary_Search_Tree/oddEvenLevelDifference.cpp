@@ -25,7 +25,7 @@ int oddEvenDifference(Node *root)
 
 int main()
 {
-    Node *root = NULL;
+    Node *root = nullptr;
 
     for (int t=0;t<max;t++) store[t] = 0;
 

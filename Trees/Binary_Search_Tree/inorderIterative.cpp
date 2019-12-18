@@ -26,7 +26,7 @@ void inorderIterative(Node *root)
 
 int main()
 {
-    Node *root = NULL;
+    Node *root = nullptr;
 
     insertNode(root, 1);
     insertNode(root, 2);

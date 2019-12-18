@@ -6,7 +6,7 @@ static int max1 = INT_MIN;
 Node *maxInPath(Node *root, int a, int b)
 {
     if (!root)
-        return NULL;
+        return nullptr;
 
     if (root->data > max1)
         max1 = root->data;
@@ -24,7 +24,7 @@ Node *maxInPath(Node *root, int a, int b)
 
 int main()
 {
-    Node *root = NULL;
+    Node *root = nullptr;
 
     insertNode(root, 18);
     insertNode(root, 36);

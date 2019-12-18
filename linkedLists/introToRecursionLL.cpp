@@ -5,7 +5,7 @@ using namespace std;
 Node *recDis(Node *head)
 {
     if (!head)
-        return NULL;
+        return nullptr;
 
     cout << head->data << " ";
     recDis(head->next);
@@ -13,7 +13,7 @@ Node *recDis(Node *head)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
     insertAtEnd(head, 10);
     insertAtEnd(head, 20);
     insertAtEnd(head, 30);

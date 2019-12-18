@@ -24,7 +24,7 @@ int zigZag(Node *root)
 
 int main()
 {
-    Node *root = NULL;
+    Node *root = nullptr;
     insertNode(root, 100);
     insertNode(root, 200);
     insertNode(root, 250);

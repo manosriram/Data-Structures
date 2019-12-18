@@ -25,7 +25,7 @@ void preorderTraversalIterative(Node *root, stack<Node *> st)
 int main()
 {
     stack<Node *> s1;
-    Node *root = NULL;
+    Node *root = nullptr;
     insertNode(root, 50);
     insertNode(root, 60);
     insertNode(root, 55);

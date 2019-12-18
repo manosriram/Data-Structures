@@ -13,7 +13,7 @@ Node *findDifference(Node *head1, Node *head2)
     
     // Setting Node's Data .
     temp->data = (p->data) - (q->data);
-    temp->next = NULL;
+    temp->next = nullptr;
 
     // Pushing the pointers 'p' and 'q' forward traversing the lists.
     p = p->next;
@@ -23,7 +23,7 @@ Node *findDifference(Node *head1, Node *head2)
     head = temp;
 
     // Traversing Both the lists at the same time.
-    while (p != NULL && q != NULL)
+    while (p != nullptr && q != NULL)
     {
         // Insert the difference of the data elements of two lists at the end.
         insertAtEnd(head, (p->data - q->data));
@@ -39,9 +39,9 @@ Node *findDifference(Node *head1, Node *head2)
 int main()
 {
     // Three Heads for three Linked Lists.
-    Node *head1 = NULL;
-    Node *head2 = NULL;
-    Node *head = NULL;
+    Node *head1 = nullptr;
+    Node *head2 = nullptr;
+    Node *head = nullptr;
     // Creation and Insertion of First List Data Elements.
     insertAtEnd(head1, 6);
     insertAtEnd(head1, 5);

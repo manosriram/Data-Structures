@@ -28,7 +28,7 @@ int main()
 {
     int *store = new int[20];
     int *hash = new int[20];
-    Node *root = NULL;
+    Node *root = nullptr;
     insertNode(root, 10);
     insertNode(root, 5);
     insertNode(root, 3);

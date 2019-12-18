@@ -4,9 +4,9 @@ using namespace std;
 
 Node *oddEven(Node *head)
 {
-    Node *head1 = NULL, *head2 = NULL, *p = head;
+    Node *head1 = nullptr, *head2 = NULL, *p = head;
 
-    while (p != NULL)
+    while (p != nullptr)
     {
         if (p->data % 2 == 0)
         {
@@ -20,7 +20,7 @@ Node *oddEven(Node *head)
     }
     p = head1;
 
-    while (p->next != NULL) {
+    while (p->next != nullptr) {
       p = p->next;
     }
     
@@ -32,7 +32,7 @@ Node *oddEven(Node *head)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
     insertAtEnd(head, 1);
     insertAtEnd(head, 2);
     insertAtEnd(head, 3);

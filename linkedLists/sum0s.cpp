@@ -7,7 +7,7 @@ Node *sum0(Node *head)
     int sum = 0;
     Node *prev = head, *temp = head, *res = head;
 
-    while (temp->next != NULL)
+    while (temp->next != nullptr)
     {
          while (temp->data != 0 && temp->next)
         {
@@ -33,7 +33,7 @@ Node *sum0(Node *head)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
 
     insertAtEnd(head, 1);
     insertAtEnd(head, 2);

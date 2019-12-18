@@ -26,7 +26,7 @@ Node *reverseNodes(Node *head, int k)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
     int k;
 
     cin >> k;

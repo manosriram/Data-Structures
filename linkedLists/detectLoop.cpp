@@ -7,7 +7,7 @@ void createLoop(Node *head)
 {
     Node *p = head;
 
-    while (p->next != NULL)
+    while (p->next != nullptr)
     {
         p = p->next;
     }
@@ -20,7 +20,7 @@ bool detectLoop(Node *head)
     unordered_set<Node *> s;
     Node *p = head;
 
-    while (p != NULL)
+    while (p != nullptr)
     {
         if (s.find(p) != s.end())
             return true;
@@ -33,7 +33,7 @@ bool detectLoop(Node *head)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
     insertAtEnd(head, 1);
     insertAtEnd(head, 2);
     insertAtEnd(head, 3);

@@ -13,7 +13,7 @@ int kthLargest(Node *root, vector<int> &store) {
 
 
 int main() {
-    Node *root = NULL;
+    Node *root = nullptr;
     vector<int> store;
 
     insertNode(root, 50);

@@ -4,10 +4,10 @@ using namespace std;
 
 Node *sum0s(Node *head)
 {
-    Node *temp = NULL;
+    Node *temp = nullptr;
     Node *p = head;
     int sum = 0;
-    while (p != NULL)
+    while (p != nullptr)
     {
         if (p->data == 0)
         {
@@ -25,7 +25,7 @@ Node *sum0s(Node *head)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
 
     insertAtEnd(head, 1);
     insertAtEnd(head, 2);

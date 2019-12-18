@@ -5,9 +5,9 @@ using namespace std;
 
 // Get the Top Most Element of the Next Stack.
 Node *getFirstK(Node *head, int k) {
-	if (!head) return NULL;
+	if (!head) return nullptr;
 	k -= 1;
-	while (k-- && head->next != NULL) {
+	while (k-- && head->next != nullptr) {
 		head = head->next;
 	}
 	return head;
@@ -26,11 +26,11 @@ stack<Node *> pushInto(Node *&head, int k, int &rem) {
 
 // Driver Function.
 Node *reverseKPairs(Node *head, int k) {
-	// No Head, return NULL.
-	if (!head) return NULL;
+	// No Head, return nullptr.
+	if (!head) return nullptr;
 
 	stack<Node *> st;
-	Node *prev, *temp, *newHead, *top_ = NULL, *bottom_ = NULL;
+	Node *prev, *temp, *newHead, *top_ = nullptr, *bottom_ = NULL;
 	bool fst = true;
 
 	// 'rem' is the Original Length of the Linked List.
@@ -84,7 +84,7 @@ Node *reverseKPairs(Node *head, int k) {
 }
 
 int main() {
-	Node *head = NULL;
+	Node *head = nullptr;
 	int k = 5;
 
 	for (int t=1;t<=15;t++)

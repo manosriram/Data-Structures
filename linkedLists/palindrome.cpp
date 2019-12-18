@@ -26,7 +26,7 @@ bool isPalindrome(Node *head) {
     Node *p = head;
     int a[1000000];
     int cnt = 0;
-    while (p != NULL) {
+    while (p != nullptr) {
         a[cnt] = p->data;
         cnt++;
         p = p->next;
@@ -45,7 +45,7 @@ bool isPalindrome(Node *head) {
 }
 
 int main() {
-    Node *head = NULL;
+    Node *head = nullptr;
 
     insertAtEnd(head, 1);
     insertAtEnd(head, 1);

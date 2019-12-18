@@ -14,8 +14,8 @@ Node *reverseLL(Node *head)
     // 'r' set next of q.
     r = q->next;
 
-    // Iterating till 'r' is not NULL.
-    while (r != NULL)
+    // Iterating till 'r' is not nullptr.
+    while (r != nullptr)
     {
         // Setting next of 'q' to previous node (p).
         q->next = p;
@@ -28,9 +28,9 @@ Node *reverseLL(Node *head)
     }
     // When out of the loop, still 'q' is not connected to p.. So, we connect them.
     q->next = p;
-    // Since the end of the List should be set to NULL.
+    // Since the end of the List should be set to nullptr.
     p = head;
-    p->next = NULL;
+    p->next = nullptr;
 
     // New 'head' is set to q.
     head = q;
@@ -41,7 +41,7 @@ Node *reverseLL(Node *head)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
     insertAtEnd(head, 1);
     insertAtEnd(head, 2);
     insertAtEnd(head, 3);

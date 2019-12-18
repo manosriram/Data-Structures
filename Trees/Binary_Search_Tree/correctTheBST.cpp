@@ -2,7 +2,7 @@
 #include "basicTreeTemplate.h"
 using namespace std;
 
-Node *temp1 = NULL, *temp2 = NULL;
+Node *temp1 = nullptr, *temp2 = NULL;
 bool correctBST(Node *root, int min, int max)
 {
     if (!root)
@@ -10,12 +10,12 @@ bool correctBST(Node *root, int min, int max)
 
     if (root->data <= min || root->data > max)
     {
-        if (temp1 != NULL)
+        if (temp1 != nullptr)
             temp2 = root;
         else
             temp1 = root;
 
-        if (temp1 != NULL && temp2 != NULL)
+        if (temp1 != nullptr && temp2 != NULL)
         {
             Node *t = temp1;
             temp1 = temp2;
@@ -28,7 +28,7 @@ bool correctBST(Node *root, int min, int max)
 
 int main()
 {
-    Node *root = NULL;
+    Node *root = nullptr;
     insertNode(root, 10);
     insertNode(root, 5);
     insertNode(root, 8);

@@ -17,12 +17,12 @@ We can have 3 base cases :
 
 Node *deleteKeys(Node *head, int x)
 {
-    Node *p = head, *q = NULL;
+    Node *p = head, *q = nullptr;
 
-    while (p != NULL)
+    while (p != nullptr)
     {
         // Element Found at Last.
-        if (p->next == NULL && p->data == x)
+        if (p->next == nullptr && p->data == x)
         {
             deleteLastElement(head);
             break;
@@ -32,7 +32,7 @@ Node *deleteKeys(Node *head, int x)
         {
             head = deleteFirstElement(head);
             p = head;
-            q = NULL;
+            q = nullptr;
             continue;
         }
         // Element Found Somewhere else.
@@ -53,7 +53,7 @@ Node *deleteKeys(Node *head, int x)
 
 int main()
 {
-    Node *head = NULL;
+    Node *head = nullptr;
     insertAtEnd(head, 4);
     insertAtEnd(head, 1);
     insertAtEnd(head, 2);

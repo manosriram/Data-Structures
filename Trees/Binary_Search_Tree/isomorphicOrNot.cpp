@@ -15,8 +15,8 @@ bool isIsomorphic(Node *root1, Node *root2)
 
 int main()
 {
-    Node *root1 = NULL;
-    Node *root2 = NULL;
+    Node *root1 = nullptr;
+    Node *root2 = nullptr;
 
     // Tree 1
     insertNode(root1, 100);

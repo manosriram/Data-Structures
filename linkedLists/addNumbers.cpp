@@ -1,4 +1,4 @@
-#include "basicActions.h"
+#include "basicActions.hpp"
 using namespace std;
 
 Node *addLists(Node *head1, Node *head2) {
@@ -6,7 +6,7 @@ Node *addLists(Node *head1, Node *head2) {
     // Two Node pointers pointing to each of the list's head.
     Node *p = head1, *q = head2;
     // New list to store result.
-    Node *result = NULL;
+    Node *result = nullptr;
 
     while (p || q) {
         sum = 0;
@@ -38,8 +38,8 @@ Node *addLists(Node *head1, Node *head2) {
 }
 
 int main() {
-    Node *head1 = NULL;
-    Node *head2 = NULL;
+    Node *head1 = nullptr;
+    Node *head2 = nullptr;
 
     // 7 -> 5 -> 9 -> 4 -> 6 (Represents 64957)
     insertAtEnd(head1, 7);

@@ -31,16 +31,16 @@ Node *doSkips(Node *head, int skips)
   Step 2 : Push the Node's Data into express's "data" field.
   Step 3 : Push the Node's Address into express's "point" field.
   Step 4 : Skip 'n' Nodes.
-  Step 5 : Repeat the process till the current node is not NULL.
+  Step 5 : Repeat the process till the current node is not nullptr.
 
 */
 
 Node *createSkipList(Node *head)
 {
   // ExpressWay Pointer.
-  Node *express = NULL;
+  Node *express = nullptr;
   Node *p = head;
-  Node *temp = NULL;
+  Node *temp = nullptr;
   int skips = 5;
 
   // Push the first Node's "data" and "address" into the express pointer's field.
@@ -81,7 +81,7 @@ void searchViaExpress(Node *head, int target)
 
   Node *p = head;
 
-  while (p->next != NULL)
+  while (p->next != nullptr)
   {
     // If Data is found, then return.
     if (p->data == target)
@@ -102,7 +102,7 @@ void searchViaExpress(Node *head, int target)
 
   // For the Last Node, we just get into the "point" field of the last node and search for the element.
   p = p->point;
-  while (p != NULL)
+  while (p != nullptr)
   {
     if (p->data == target)
     {
@@ -118,8 +118,8 @@ void searchViaExpress(Node *head, int target)
 
 int main()
 {
-  Node *head = NULL;
-  Node *expressHead = NULL;
+  Node *head = nullptr;
+  Node *expressHead = nullptr;
 
   insertAtEnd(head, 10);
   insertAtEnd(head, 20);

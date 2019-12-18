@@ -25,7 +25,7 @@ int findFullNodes(Node *root)
 
 int main()
 {
-    Node *root = NULL;
+    Node *root = nullptr;
     insertNode(root, 50);
     insertNode(root, 60);
     insertNode(root, 70);
