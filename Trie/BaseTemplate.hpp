@@ -16,7 +16,7 @@ struct TrieNode *createNode() {
     pNode->eOF = false;
 
     for (int t = 0; t < alpha_size; t++) {
-        pNode->children[t] = NULL;
+        pNode->children[t] = nullptr;
     }
     return pNode;
 }
@@ -51,7 +51,7 @@ bool search(string key, TrieNode *root) {
 
         crawl = crawl->children[index];
     }
-    return (crawl != NULL && crawl->eOF);
+    return (crawl != nullptr && crawl->eOF);
 }
 
 bool isLastNode(TrieNode *root) {
