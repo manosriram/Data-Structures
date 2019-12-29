@@ -18,6 +18,9 @@ int leastPrimeDivisor(int n) {
     return n;
 }
 
+void Update(int st, int ed, int in) {
+}
+
 void Build(int *arr, int st, int ed, int in) {
     if (st == ed) {
         tree[in] = leastPrimeDivisor(arr[st]);
@@ -44,6 +47,21 @@ int Query(int st, int ed, int qs, int qe, int in) {
     return max(tree[2*in], tree[(2*in) + 1]);
 }
 
+void Update(int st, int ed, int qs, int qe, int in) {
+    if (st > qe || ed < qs)
+        return;
+    if (st == ed) {
+        tree[in] /= leastPrimeDivisor(tree[in]);
+        return;
+    } 
+    int mid = (st + ed) / 2;
+
+    Update(st, mid, qs, qe, 2 * in);
+    Update(mid+1, ed, qs, qe, (2 * in) + 1);
+
+    tree[in] = max(tree[2 * in], tree[(2 * in) + 1]);
+}
+
 int main() {
     int T, n, m;
     cin >> T;
@@ -56,12 +74,17 @@ int main() {
 
         Build(a, 0, n-1, 1);
 
-        for (int t=1;t<=2*n;++t)
-            cout << tree[t] << " ";
-        return 1;
         int type, l, r;
         while(m--) {
             cin >> type >> l >> r;
+
+            if (type == 0)
+                Update(0, n-1, l, r, 1);
+            if (type == 1)
+                cout << Query(0, n-1, l, r, 1);
+
+            cout << " ";
         }
+        cout << '\n';
     }
 }
