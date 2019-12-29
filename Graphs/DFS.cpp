@@ -1,20 +1,17 @@
-#include <iostream>
+#include "GraphStructure.hpp"
 #include <stack>
-#include <vector>
 #include <utility>
-#include "Intro.hpp"
-using namespace std;
 
-void DFS(int vtx, bool visited[], vector<int> grph[])
+void DFS(int vtx, Graph *g)
 {
-    visited[vtx] = true;
+    g->visited[vtx] = true;
     cout << vtx << " ";
 
-    for (auto itr = grph[vtx].begin(); itr != grph[vtx].end(); itr++)
+    for (auto itr = g->list[vtx].begin(); itr != g->list[vtx].end(); itr++)
     {
-        if (!visited[*itr])
+        if (!g->visited[*itr])
         {
-            DFS(*itr, visited, grph);
+            DFS(*itr, g);
         }
     }
     return;
@@ -23,19 +20,17 @@ void DFS(int vtx, bool visited[], vector<int> grph[])
 int main()
 {
     int nodes = 9;
-    vector<int> grph[10];
-    bool visited[nodes];
-    memset(visited, false, sizeof(visited));
+    Graph *g = new Graph(nodes);
 
-    addEdge(1, 2, grph);
-    addEdge(1, 3, grph);
-    addEdge(2, 4, grph);
-    addEdge(2, 5, grph);
-    addEdge(2, 6, grph);
-    addEdge(3, 7, grph);
-    addEdge(7, 8, grph);
-    addEdge(8, 9, grph);
+    g->addEdge(1, 2);
+    g->addEdge(1, 3);
+    g->addEdge(2, 4);
+    g->addEdge(2, 5);
+    g->addEdge(2, 6);
+    g->addEdge(3, 7);
+    g->addEdge(7, 8);
+    g->addEdge(8, 9);
 
-    DFS(1, visited, grph);
+    DFS(1, g);
     cout << endl;
 }
