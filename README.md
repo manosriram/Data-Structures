@@ -103,6 +103,6 @@
 - [Min-Range Query.](https://github.com/manosriram/Data-Structures/blob/master/Segment-Tree/minRangeQuery.cpp)
 - [Max-Range Query.](https://github.com/manosriram/Data-Structures/blob/master/Segment-Tree/maxRangeQuery.cpp)
 
-### 10. [Disjoint Sets]()
+### 10. [Disjoint Sets](https://github.com/manosriram/Data-Structures/tree/master/Disjoint-Sets)
 - [Set Functions](https://github.com/manosriram/Data-Structures/blob/master/Disjoint-Sets/DisjointSet.hpp)
 - [Driver File](https://github.com/manosriram/Data-Structures/blob/master/Disjoint-Sets/Main.cpp)
