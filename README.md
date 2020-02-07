@@ -109,6 +109,6 @@
 - [Quick Find](https://github.com/manosriram/Data-Structures/blob/master/Disjoint-Sets/_quickFind.hpp)
 - [Quick Find Driver](https://github.com/manosriram/Data-Structures/blob/master/Disjoint-Sets/quickFind.cpp)
 
-### 10. [XOR Linked List](https://github.com/manosriram/Data-Structures/tree/master/XOR-Linked-List)
+### 11. [XOR Linked List](https://github.com/manosriram/Data-Structures/tree/master/XOR-Linked-List)
 - [Driver File](https://github.com/manosriram/Data-Structures/blob/master/XOR-Linked-List/Src.cpp)
 - [Node Structure](https://github.com/manosriram/Data-Structures/blob/master/XOR-Linked-List/Structure.hpp)
