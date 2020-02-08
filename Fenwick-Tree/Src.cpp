@@ -1,7 +1,8 @@
 #include "./BuildTree.hpp"
+#include "./getSum.hpp"
 
 int main() {
-    vector<int> sumArray { 1, 2, 3, 4, 5, 6 };
+    vector<int> sumArray { 3, 2, -1, 6, 5, 4, -3, 3, 7, 2, 3 };
 
     vector<int> BTree = Build(sumArray, sumArray.size());
 
