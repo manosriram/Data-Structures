@@ -1,49 +1,41 @@
-#include "GraphStructure.hpp"
+#include <iostream>
+#include <vector>
 #include <queue>
+using namespace std;
 
-void BFS(Graph *g, int root)
-{
-    queue<int> queue;
+vector<int> g[100];
+bool visited[100] = { false };
 
-    // Push the Root and mark it as visited.
-    queue.push(root);
-    g->visited[root] = true;
+void BFS() {
+    queue<int> q;
+    q.push(1);
+    visited[1] = true;
+    while (!q.empty()) {
+        int currentNode = q.front();
+        cout << currentNode << " ";
+        q.pop();
 
-    // While the Queue isn't Empty.
-    while (!queue.empty())
-    {
-        // Pop the front element and print it.
-        int frnt = queue.front();
-        cout << frnt << " ";
-        queue.pop();
-
-        // For the Popped element, get the nodes they are connected to.
-        for (auto t = g->list[frnt].begin(); t != g->list[frnt].end(); t++)
-        {
-            // Push the element into queue if-and-only-if it is not visited.
-            if (!g->visited[*t])
-            {
-                // Mark the node as Visited and push the element into queue.
-                g->visited[*t] = true;
-                queue.push(*t);
+        for (auto node: g[currentNode]) {
+            if (!visited[node]) {
+                visited[node] = true;
+                q.push(node);
             }
         }
     }
-    cout << endl;
+}
+
+void addEdge(int s, int d) {
+    g[s].push_back(d);
+    g[d].push_back(s);
     return;
 }
 
-int main()
-{
-    int nodes = 5;
-    Graph *g = new Graph(nodes);
+int main() {
+    int n = 4;
+    addEdge(1, 2);
+    addEdge(1, 3);
+    addEdge(2, 3);
+    addEdge(2, 4);
 
-    g->addEdge(0, 1);
-    g->addEdge(0, 2);
-    g->addEdge(1, 2);
-    g->addEdge(2, 0);
-    g->addEdge(2, 3);
-    g->addEdge(3, 3);
-
-    BFS(g, 2);
+    BFS();
 }
