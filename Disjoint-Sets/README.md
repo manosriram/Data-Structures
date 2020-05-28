@@ -5,7 +5,7 @@ Applications:
     1. Connected components in a graph.
     2. Search for connected components in an image.
     3. Compress jumps along a segment / Painting subarrays offline.
-    4. Kruskals minimum spanning tree.
+    4. Kruskals minimum spanning tree and many more...
 ```
 
 
