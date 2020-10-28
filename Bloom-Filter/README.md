@@ -40,3 +40,5 @@
 	hash-function indices, Any other word which might have occupied that index will be lost. When no of words
 	are high, there is a high probability that many words will be lost. Hence, we don't delete words from
 	bloom filter.
+
+To know more: [Tutorial](https://www.youtube.com/c/manosriram)
